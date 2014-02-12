@@ -157,7 +157,7 @@ collection on site at the library, e.g. in a reading room.
         rdfs:label "Präsenzansicht"@de, "Presentation"@en ;
         rdfs:comment "A service to provide space to use the media collection on site at the library, e.g. in a reading room." ;
         rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
-        rdfs:subClassOf dso:documentService, lso:LocalUSage .
+        rdfs:subClassOf dso:DocumentService, lso:LocalUSage .
 
 **Local Services for Information Transfer:** A local information service is a
 kind of ser- vice provided to inform the library users on site in the library.
