@@ -7,7 +7,7 @@ ontology] and to the [vCard Ontology].  The current version of this ontology is
 a preliminary draft as part of a Bachelor Thesis.  This is Version {VERSION},
 last modified at {GIT_REVISION_DATE}.
 
-[GoodRelations Ontology]: http://www.heppnetz.de/projects/goodrelations/
+[GoodRelations Ontology]: http://purl.org/goodrelations/v1
 [Service Ontology]: http://purl.org/ontology/service
 [Document Service ontology]: http://purl.org/ontology/dso
 [vCard Ontology]: http://www.w3.org/TR/vcard-rdf/
@@ -20,9 +20,7 @@ The URI of this ontology as a whole is <http://purl.org/ontology/libso>.
 
 The following namespace prefixes are used to refer to related ontologies:
 
-    @prefix a: <http://protege.stanford.edu/system#> .
     @prefix dct: <http://purl.org/dc/terms/> .
-    @prefix dcterms: <http://purl.org/dc/terms/> .
     @prefix dso: <http://purl.org/ontology/dso#> .
     @prefix foaf: <http://xmlns.com/foaf/0.1/> .
     @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -32,30 +30,20 @@ The following namespace prefixes are used to refer to related ontologies:
     @prefix owl: <http://www.w3.org/2002/07/owl#> .
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
     @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-    @prefix s: <http://schema.org/> .
     @prefix schema: <http://schema.org/> .
     @prefix service: <http://purl.org/ontology/service#> .
     @prefix vann: <http://purl.org/vocab/vann/> .
     @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
     @prefix voaf: <http://purl.org/vocommons/voaf#> .
-    @prefix xml: <http://www.w3.org/XML/1998/namespace> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 The Library Service Ontology is defined in RDF/Turtle as following:
 
-    @prefix a: <http://protege.stanford.edu/system#> .
-    @prefix dct: <http://purl.org/dc/terms/> .
-    @prefix vann: <http://purl.org/vocab/vann/> .
-    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-    @prefix voaf: <http://purl.org/vocommons/voaf#> .
-    @prefix owl: <http://www.w3.org/2002/07/owl#> .
-
-    <http://purl.org/ontology/libso> a voaf:Vocabulary,
-        owl:Ontology ;
+    <http://purl.org/ontology/libso> a voaf:Vocabulary, owl:Ontology ;
         dct:creator "Matthias Letsch" ;
         dct:description "An Ontology to define a classification of conventional services provided by libraries." ;
         dct:modified "{GIT_REVISION_DATE}"^^xsd:date ;
-        dct:title "Library [Service Ontology]"@en ;
+        dct:title "Library Service Ontology"@en ;
         vann:preferredNamespacePrefix "lso" ;
         vann:preferredNamespaceUri "http://purl.org/ontology/libso#" ;
         owl:versionInfo "{VERSION}" .
@@ -79,15 +67,15 @@ price specifications by resorting to selected properties and classes from the
 [provides]: http://purl.org/ontology/service#provides
 [providedBy]: http://purl.org/ontology/service#providedBy
 
-[LibraryService]: #
-[Local]: #
-[Webbased]: #
-
 # Original Concepts
 
 ## Classes
 
-A library service is a kind of service provided by a library or a related
+[LibraryService]: #classes
+[Local]: #classes
+[Webbased]: #classes
+
+A **library service** is a kind of service provided by a library or a related
 Institution. The core class is lso:LibraryService. Each instance of
 lso:LibraryService is also an instance of service:Service, gr:ProductOrService
 or dctype:Service. For some possible connections to a Service also see the
@@ -103,8 +91,7 @@ to define the services without generating redundant vocabulary.
         rdfs:label "Bibliotheksdienstleistung"@de, "Library Service"@en ;
         rdfs:comment "A kind of service provided by a library or a related Institution." ;
         rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
-        rdfs:subClassOf service:Service ;
-        a:role "abstract" .
+        rdfs:subClassOf service:Service .
 
 **Components of Services:** A subservice is a single component of a
 higher-level service.
@@ -253,7 +240,6 @@ users making personal copies or scans of documents.
 
     dso:Digitization a rdfs:Class ;
         rdfs:label "Scanner"@en ;
-        a:role "concrete" ;
         rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
         rdfs:subClassOf lso:CopierOrScanner .
 
@@ -368,8 +354,10 @@ The Library Service classes can be linked to other kinds of classes to express c
 relations. Where possible, use is made of existing ontologies in order to make certain
 statements without generating redundant vocabulary.
 
+[service:ServiceLimitation]: http://purl.org/ontology/service#ServiceLimitation
+
 **Condition:** The Condition class defines terms of use for a service, e.g.
-price specifications or periods.
+price specifications or periods. This equals to [service:ServiceLimitation].
 
     lso:Condition a rdfs:Class ;
         rdfs:label "Nutzungskondition"@de, "Condition"@en ;
