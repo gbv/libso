@@ -1,5 +1,4 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix a: <http://protege.stanford.edu/system#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dso: <http://purl.org/ontology/dso#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -9,12 +8,11 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix s: <http://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix service: <http://purl.org/ontology/service#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 gr:DayOfWeek
@@ -97,7 +95,7 @@ gr:hasOpeningHoursDayOfWeek
 gr:hasOpeningHoursSpecification
     a rdf:Property ;
     rdfs:comment "For use in LSO: This property links a lso:Local to a gr:OpeningHoursSpecification.", "This property links a gr:Location to a gr:OpeningHoursSpecification." ;
-    rdfs:domain gr:Location, lso:Local, s:Place ;
+    rdfs:domain gr:Location, lso:Local, schema:Place ;
     rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
     rdfs:label "has opening hours specification (0..*)"@en ;
     rdfs:range gr:OpeingHoursSpecification .
@@ -105,7 +103,7 @@ gr:hasOpeningHoursSpecification
 gr:hasPriceSpecification
     a rdf:Property ;
     rdfs:comment "For use in LSO: This property links a lso:LibraryService to a gr:PriceSpecification.", "This links a gr:Offering to a gr:PriceSpecification or specifications..." ;
-    rdfs:domain gr:Offering, lso:LibraryService, s:Offer ;
+    rdfs:domain gr:Offering, lso:LibraryService, schema:Offer ;
     rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
     rdfs:label "has price specification (0..*)"@en ;
     rdfs:range gr:PriceSpecification .
@@ -119,7 +117,6 @@ gr:opens
     rdfs:range xsd:time .
 
 dso:Digitization
-    a:role "concrete" ;
     a rdfs:Class ;
     rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
     rdfs:label "Scanner"@en ;
@@ -153,12 +150,12 @@ dso:loan
 <http://purl.org/ontology/libso>
     dct:creator "Matthias Letsch" ;
     dct:description "An Ontology to define a classification of conventional services provided by libraries." ;
-    dct:modified "2013-12-09"^^xsd:date ;
-    dct:title "Library [Service Ontology]"@en ;
+    dct:modified "2014-02-12"^^xsd:date ;
+    dct:title "Library Service Ontology"@en ;
     vann:preferredNamespacePrefix "lso" ;
     vann:preferredNamespaceUri "http://purl.org/ontology/libso#" ;
     a voaf:Vocabulary, owl:Ontology ;
-    owl:versionInfo "0.1" .
+    owl:versionInfo "0.1.1" .
 
 lso:Catalogue
     a rdfs:Class ;
@@ -230,7 +227,6 @@ lso:InformationCounter
     rdfs:subClassOf lso:LocalInformation .
 
 lso:LibraryService
-    a:role "abstract" ;
     a rdfs:Class ;
     rdfs:comment "A kind of service provided by a library or a related Institution." ;
     rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
@@ -473,14 +469,14 @@ service:Service
     a owl:Class ;
     rdfs:isDefinedBy <http://purl.org/ontology/service> ;
     rdfs:label "Service"@en ;
-    rdfs:seeAlso s:Product, s:Service ;
+    rdfs:seeAlso schema:Product, schema:Service ;
     rdfs:subClassOf dct:Service, gr:ProductOrService .
 
 service:ServiceProvider
     a rdfs:Class ;
     rdfs:isDefinedBy <http://purl.org/ontology/service> ;
     rdfs:label "ServiceProvider"@en ;
-    rdfs:seeAlso dct:agent, gr:BusinessEntity, s:Organization, s:person, foaf:agent .
+    rdfs:seeAlso dct:agent, gr:BusinessEntity, schema:Organization, schema:person, foaf:agent .
 
 service:providedBy
     a owl:ObjectProperty ;
@@ -488,7 +484,7 @@ service:providedBy
     rdfs:isDefinedBy <http://purl.org/ontology/service> ;
     rdfs:label "providedBy"@en ;
     rdfs:range service:ServiceProvider ;
-    rdfs:seeAlso s:provider ;
+    rdfs:seeAlso schema:provider ;
     owl:inverseOf service:provides .
 
 service:provides
