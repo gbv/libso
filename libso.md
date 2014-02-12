@@ -121,7 +121,7 @@ kind of service provided to take use of the library’s media collection.
         rdfs:comment "A kind of service provided to take use of the library’s media collection." ;
         rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
         rdfs:subClassOf lso:Local ;
-        owl:sameAs dso:documentService .
+        owl:sameAs dso:DocumentService .
 
 **Loan:** A loan is a typical library loan service. The class dso:loan is part
 of the [Document Service Ontology].
@@ -157,7 +157,7 @@ collection on site at the library, e.g. in a reading room.
         rdfs:label "Präsenzansicht"@de, "Presentation"@en ;
         rdfs:comment "A service to provide space to use the media collection on site at the library, e.g. in a reading room." ;
         rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
-        rdfs:subClassOf dso:documentService, lso:LocalUSage .
+        rdfs:subClassOf dso:DocumentService, lso:LocalUSage .
 
 **Local Services for Information Transfer:** A local information service is a
 kind of ser- vice provided to inform the library users on site in the library.
