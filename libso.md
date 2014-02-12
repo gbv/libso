@@ -563,11 +563,11 @@ or more of the formerly defined library services.
     service:ServiceProvider a rdfs:Class ;
         rdfs:label "ServiceProvider"@en ;
         rdfs:isDefinedBy <http://purl.org/ontology/service> ;
-        rdfs:seeAlso dct:agent,
+        rdfs:seeAlso dct:Agent,
             gr:BusinessEntity,
             schema:Organization,
             schema:person,
-            foaf:agent .
+            foaf:Agent .
 
 ## Classes from GoodRelations Ontology
 
