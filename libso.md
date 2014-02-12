@@ -121,7 +121,7 @@ kind of service provided to take use of the library’s media collection.
         rdfs:comment "A kind of service provided to take use of the library’s media collection." ;
         rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
         rdfs:subClassOf lso:Local ;
-        owl:sameAs dso:documentService .
+        owl:sameAs dso:DocumentService .
 
 **Loan:** A loan is a typical library loan service. The class dso:loan is part
 of the [Document Service Ontology].
