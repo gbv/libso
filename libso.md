@@ -83,7 +83,9 @@ price specifications by resorting to selected properties and classes from the
 [Local]: #
 [Webbased]: #
 
-# Library Service Classes
+# Original Concepts
+
+## Classes
 
 A library service is a kind of service provided by a library or a related
 Institution. The core class is lso:LibraryService. Each instance of
@@ -360,7 +362,7 @@ chat, email or online tutorials.
         rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
         rdfs:subClassOf lso:WebBasedInformation .
 
-# Other LSO Classes
+## Adjusted classes from related ontologies
 
 The Library Service classes can be linked to other kinds of classes to express certain
 relations. Where possible, use is made of existing ontologies in order to make certain
@@ -457,191 +459,7 @@ by licenses through predefined Instances.
         rdfs:Label "Kostenpflichtiges Angebot"@de, "Paid Offer"@en ;
         rdfs:isDefinedBy <http://purl.org/ontology/libso> .
 
-# Classes from the [Service Ontology]
-
-**Service:** The Service Provider class is part of the [Service Ontology]. A
-service is some action that is done for someone.
-
-    service:Service a owl:Class ;
-        rdfs:label "Service"@en ;
-        rdfs:isDefinedBy <http://purl.org/ontology/service> ;
-        rdfs:seeAlso schema:Product,
-        schema:Service ;
-        rdfs:subClassOf dct:Service, gr:ProductOrService .
-
-**Service Provider:** The Service Provider class is part of the Service
-Ontology. A service provider is an entity that is responsible for providing a
-Service. In the present case, the entity is primarily a library providing one
-or more of the formerly defined library services.
-
-    service:ServiceProvider a rdfs:Class ;
-        rdfs:label "ServiceProvider"@en ;
-        rdfs:isDefinedBy <http://purl.org/ontology/service> ;
-        rdfs:seeAlso dct:agent,
-            gr:BusinessEntity,
-            schema:Organization,
-            schema:person,
-            foaf:agent .
-
-# Classes from the GoodRelations Ontology
-
-**Opening Hours Specification:** The Opening Hours Specification class from the
-GoodRelations Ontology is used to define opening times for local services. It
-is linked to the Day of Week class in order to define the days on which a
-service is accessible.
-
-    gr:OpeningHoursSpecification a rdfs:Class ;
-        rdfs:label "Opening hours specification"@en ;
-        rdfs:comment "This is a conceptual entity that holds together all information about the opening hours on a given day (gr:DayOfWeek)." ;
-        rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> .
-
-**Day of Week**
-
-    gr:DayOfWeek a rdfs:Class ;
-        rdfs:label "Day of Week"@en ;
-        rdfs:comment "The day of the week, used to specify to which day the opening hours of a gr:OpeningHoursSpecification refer." ;
-        rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> .
-
-**Day of Week: Predefined Instances**
-
-    gr:Monday a gr:DayOfWeek .
-    gr:Tuesday a gr:DayOfWeek .
-    gr:Wednesday a gr:DayOfWeek .
-    gr:Thursday a gr:DayOfWeek .
-    gr:Friday a gr:DayOfWeek .
-    gr:Saturday a gr:DayOfWeek .
-    gr:Sunday a gr:DayOfWeek .
-
-**Unit Price Specification:** The Unit Price Specification class from the Good
-Relations Ontology is used to define the price for the use of a certain
-service.
-
-    gr:UnitPriceSpecification a rdfs:Class ;
-        rdfs:label "Unit price specification"@en ;
-        rdfs:comment """A unit price specification is a conceptual entity that 
-            specifies the price asked for a given gr:Offering by the respective gr:Business
-            Entity. An offering may be linked to multiple unit price specifications that
-            specify alternative prices for non-overlapping sets of conditions (e.g. 
-            quantities or sales regions) or with differing validity periods...""" ;
-        rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> .
-
-# Classes from the vCard Ontology
-
-**Individual:** The Individual Class is part of the vCard Vocabulary. In the
-present case, it is used to represent a contactable person responsible for a
-certain service.
-
-    vcard:Individual a owl:Class ;
-        rdfs:label "Individual"^^xsd:string ;
-        rdfs:comment "An object representing a single person or entity"^^xsd:string ;
-        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-        rdfs:subClassOf vcard:Kind ;
-        owl:disjointWith vcard:Location,
-        vcard:Organization .
-
-**Organization:** The Organization Class is part of the vCard Vocabulary. In the present
-case, it is used to represent a contactable department responsible for a certain service.
-
-    vcard:Organization a owl:Class ;
-        rdfs:label "Organization"^^xsd:string ;
-        rdfs:comment """An object representing an organization. An organization
-            is a single entity, and might represent a business or government, a department
-            or division within a business or government, a club, an association, or the
-            like."""^^xsd:string;
-        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-        rdfs:subClassOf vcard:Kind .
-
-**Email:** The Email Class is part of the vCard Vocabulary. In the present case, it is used to
-link an email address to a person or department responsible for a certain service.
-
-    vcard:Email a owl:Class ;
-        rdfs:label "Email"^^xsd:string ;
-        rdfs:comment """To specify the electronic mail address for communication
-            with the object the vCard represents. Use the hasEmail object property."""^^xsd:string ;
-        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-        owl:deprecated true .
-
-**Voice:** The Voice Class is part of the vCard Vocabulary. In the present case, it is used to
-link a telephone number to a person or department responsible for a certain service.
-
-    vcard:Voice a owl:Class ;
-    rdfs:label "Voice"^^xsd:string ;
-    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-    rdfs:subClassOf vcard:TelephoneType .
-
-**Fax:** The Fax Class is part of the vCard Vocabulary. In the present case, it is used to link
-a fax number to a person or department responsible for a certain service.
-
-    vcard:Fax a owl:Class ;
-        rdfs:label "Fax"^^xsd:string ;
-        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-        rdfs:subClassOf vcard:TelephoneType .
-
-**Address:** The Address Class is part of the vCard Vocabulary. In the present
-case, the Address Class is used to define a address to a physical site for any
-service point of lso:PointOfService.
-
-    vcard:Address a owl:Class ;
-        rdfs:label "Address"^^xsd:string ;
-        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-        rdfs:comment "To specify the components of the delivery address for the object"^^xsd:string .
-
-# Location Class from the Basic Geo Vocabulary
-
-**Location:** The Location Class from the Basic Geo Vocabulary is used to
-define coordinates for service points of lso:PointOfService.
-
-    geo:Location a rdfs:Class .
-
-# Classes from the Organization Ontology
-
-**Organization:** The Organization Class from the Organization Ontology is used
-to define service providers of service:ServiceProvider as Organizations.
-
-    org:Organization a rdfs:Class, owl:Class ;
-        rdfs:label "Organization"@en ;
-        rdfs:comment """Represents a collection of people organized together into a
-            community or other social, commercial or political structure. The group has
-            some common purpose or reason for existence which goes beyond the set of
-            people belonging to it and can act as an Agent. Organizations are often 
-            decomposable into hierarchical structures. It is recommended that SKOS lexical labels
-            should be used to label the Organization. In particular `skos:prefLabel` for
-            the primary (possibly legally recognized name), `skos:altLabel` for alternative
-            names (trading names, colloquial names) and `skos:notation` to denote a
-            code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"""@en ;
-        rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-        rdfs:subClassOf foaf:Agent ;
-        owl:equivalentClass foaf:Organization ;
-        owl:hasKey ( org:identifier ) .
-
-**Organizational Unit:** The Organizational Unit Class from the Organization
-Ontology is used to define service points of lso:PointOfService as Units of
-Instances of service:ServiceProvider.
-
-    org:OrganizationalUnit a rdfs:Class, owl:Class ;
-        rdfs:label "OrganizationalUnit"@en ;
-        rdfs:comment """An Organization such as a University Support Unit which is
-            part of some larger FormalOrganization and only has full recognition within
-            the context of that FormalOrganization, it is not a Legal Entity in its own
-            right. Units can be large and complex containing other Units and even
-            FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"""@en ;
-        rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-        rdfs:subClassOf org:Organization .
-
-**Site:** The Site Class from the Organization Ontology is used to represent a
-physical site for any service point of lso:PointOfService.
-
-    org:Site a rdfs:Class, owl:Class ;
-        rdfs:label "Site"@en ;
-        rdfs:comment """An office or other premise at which the organization is
-            located. Many organizations are spread across multiple sites and many sites will
-            host multiple locations. In most cases a Site will be a physical location.
-            However, we don't exclude the possibility of non-physical sites such as a
-            virtual office with an associated post box and phone reception service. 
-            Extensions may provide subclasses to denote particular types of site."""@en ;
-        rdfs:isDefinedBy <http://www.w3.org/ns/org> .
-
-# LSO Properties
+## Properties
 
 **Has Point of Service:** This property is used to link local services to a
 physical point of service. It is only usable in connection with service
@@ -735,7 +553,193 @@ ment of vcard:Individual or vcard:Organization.
         rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
         rdfs:range rdfs:Literal .
 
-# Properties from the Service Ontology
+# Parts from related Ontologies
+
+## Classes from the Service Ontology
+
+**Service:** The Service Provider class is part of the [Service Ontology]. A
+service is some action that is done for someone.
+
+    service:Service a owl:Class ;
+        rdfs:label "Service"@en ;
+        rdfs:isDefinedBy <http://purl.org/ontology/service> ;
+        rdfs:seeAlso schema:Product,
+        schema:Service ;
+        rdfs:subClassOf dct:Service, gr:ProductOrService .
+
+**Service Provider:** The Service Provider class is part of the Service
+Ontology. A service provider is an entity that is responsible for providing a
+Service. In the present case, the entity is primarily a library providing one
+or more of the formerly defined library services.
+
+    service:ServiceProvider a rdfs:Class ;
+        rdfs:label "ServiceProvider"@en ;
+        rdfs:isDefinedBy <http://purl.org/ontology/service> ;
+        rdfs:seeAlso dct:agent,
+            gr:BusinessEntity,
+            schema:Organization,
+            schema:person,
+            foaf:agent .
+
+## Classes from GoodRelations Ontology
+
+**Opening Hours Specification:** The Opening Hours Specification class from the
+GoodRelations Ontology is used to define opening times for local services. It
+is linked to the Day of Week class in order to define the days on which a
+service is accessible.
+
+    gr:OpeningHoursSpecification a rdfs:Class ;
+        rdfs:label "Opening hours specification"@en ;
+        rdfs:comment "This is a conceptual entity that holds together all information about the opening hours on a given day (gr:DayOfWeek)." ;
+        rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> .
+
+**Day of Week**
+
+    gr:DayOfWeek a rdfs:Class ;
+        rdfs:label "Day of Week"@en ;
+        rdfs:comment "The day of the week, used to specify to which day the opening hours of a gr:OpeningHoursSpecification refer." ;
+        rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> .
+
+**Day of Week: Predefined Instances**
+
+    gr:Monday a gr:DayOfWeek .
+    gr:Tuesday a gr:DayOfWeek .
+    gr:Wednesday a gr:DayOfWeek .
+    gr:Thursday a gr:DayOfWeek .
+    gr:Friday a gr:DayOfWeek .
+    gr:Saturday a gr:DayOfWeek .
+    gr:Sunday a gr:DayOfWeek .
+
+**Unit Price Specification:** The Unit Price Specification class from the Good
+Relations Ontology is used to define the price for the use of a certain
+service.
+
+    gr:UnitPriceSpecification a rdfs:Class ;
+        rdfs:label "Unit price specification"@en ;
+        rdfs:comment """A unit price specification is a conceptual entity that 
+            specifies the price asked for a given gr:Offering by the respective gr:Business
+            Entity. An offering may be linked to multiple unit price specifications that
+            specify alternative prices for non-overlapping sets of conditions (e.g. 
+            quantities or sales regions) or with differing validity periods...""" ;
+        rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> .
+
+## Classes from the vCard Ontology
+
+**Individual:** The Individual Class is part of the vCard Vocabulary. In the
+present case, it is used to represent a contactable person responsible for a
+certain service.
+
+    vcard:Individual a owl:Class ;
+        rdfs:label "Individual"^^xsd:string ;
+        rdfs:comment "An object representing a single person or entity"^^xsd:string ;
+        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+        rdfs:subClassOf vcard:Kind ;
+        owl:disjointWith vcard:Location,
+        vcard:Organization .
+
+**Organization:** The Organization Class is part of the vCard Vocabulary. In the present
+case, it is used to represent a contactable department responsible for a certain service.
+
+    vcard:Organization a owl:Class ;
+        rdfs:label "Organization"^^xsd:string ;
+        rdfs:comment """An object representing an organization. An organization
+            is a single entity, and might represent a business or government, a department
+            or division within a business or government, a club, an association, or the
+            like."""^^xsd:string;
+        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+        rdfs:subClassOf vcard:Kind .
+
+**Email:** The Email Class is part of the vCard Vocabulary. In the present case, it is used to
+link an email address to a person or department responsible for a certain service.
+
+    vcard:Email a owl:Class ;
+        rdfs:label "Email"^^xsd:string ;
+        rdfs:comment """To specify the electronic mail address for communication
+            with the object the vCard represents. Use the hasEmail object property."""^^xsd:string ;
+        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+        owl:deprecated true .
+
+**Voice:** The Voice Class is part of the vCard Vocabulary. In the present case, it is used to
+link a telephone number to a person or department responsible for a certain service.
+
+    vcard:Voice a owl:Class ;
+    rdfs:label "Voice"^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:subClassOf vcard:TelephoneType .
+
+**Fax:** The Fax Class is part of the vCard Vocabulary. In the present case, it is used to link
+a fax number to a person or department responsible for a certain service.
+
+    vcard:Fax a owl:Class ;
+        rdfs:label "Fax"^^xsd:string ;
+        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+        rdfs:subClassOf vcard:TelephoneType .
+
+**Address:** The Address Class is part of the vCard Vocabulary. In the present
+case, the Address Class is used to define a address to a physical site for any
+service point of lso:PointOfService.
+
+    vcard:Address a owl:Class ;
+        rdfs:label "Address"^^xsd:string ;
+        rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+        rdfs:comment "To specify the components of the delivery address for the object"^^xsd:string .
+
+## Location Class from the Basic Geo Vocabulary
+
+**Location:** The Location Class from the Basic Geo Vocabulary is used to
+define coordinates for service points of lso:PointOfService.
+
+    geo:Location a rdfs:Class .
+
+## Classes from the Organization Ontology
+
+**Organization:** The Organization Class from the Organization Ontology is used
+to define service providers of service:ServiceProvider as Organizations.
+
+    org:Organization a rdfs:Class, owl:Class ;
+        rdfs:label "Organization"@en ;
+        rdfs:comment """Represents a collection of people organized together into a
+            community or other social, commercial or political structure. The group has
+            some common purpose or reason for existence which goes beyond the set of
+            people belonging to it and can act as an Agent. Organizations are often 
+            decomposable into hierarchical structures. It is recommended that SKOS lexical labels
+            should be used to label the Organization. In particular `skos:prefLabel` for
+            the primary (possibly legally recognized name), `skos:altLabel` for alternative
+            names (trading names, colloquial names) and `skos:notation` to denote a
+            code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"""@en ;
+        rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+        rdfs:subClassOf foaf:Agent ;
+        owl:equivalentClass foaf:Organization ;
+        owl:hasKey ( org:identifier ) .
+
+**Organizational Unit:** The Organizational Unit Class from the Organization
+Ontology is used to define service points of lso:PointOfService as Units of
+Instances of service:ServiceProvider.
+
+    org:OrganizationalUnit a rdfs:Class, owl:Class ;
+        rdfs:label "OrganizationalUnit"@en ;
+        rdfs:comment """An Organization such as a University Support Unit which is
+            part of some larger FormalOrganization and only has full recognition within
+            the context of that FormalOrganization, it is not a Legal Entity in its own
+            right. Units can be large and complex containing other Units and even
+            FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"""@en ;
+        rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+        rdfs:subClassOf org:Organization .
+
+**Site:** The Site Class from the Organization Ontology is used to represent a
+physical site for any service point of lso:PointOfService.
+
+    org:Site a rdfs:Class, owl:Class ;
+        rdfs:label "Site"@en ;
+        rdfs:comment """An office or other premise at which the organization is
+            located. Many organizations are spread across multiple sites and many sites will
+            host multiple locations. In most cases a Site will be a physical location.
+            However, we don't exclude the possibility of non-physical sites such as a
+            virtual office with an associated post box and phone reception service. 
+            Extensions may provide subclasses to denote particular types of site."""@en ;
+        rdfs:isDefinedBy <http://www.w3.org/ns/org> .
+
+## Properties from the Service Ontology
 
 The properties from the [Service Ontology] are used to link a
 service:ServiceProvider to a lso:LibraryService.
@@ -759,7 +763,7 @@ service:ServiceProvider to a lso:LibraryService.
         rdfs:seeAlso schema:provider ;
         owl:inverseOf service:provides .
 
-# Properties from the GoodRelations Ontology
+## Properties from the GoodRelations Ontology
 
 The Properties from the [GoodRelations Ontology] are used to define opening
 hours for local services and any price specifications.
@@ -846,7 +850,7 @@ modified slightly. Comments are partially shortened compared to the original.
         rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
         rdfs:range xsd:float .
 
-# Properties from the vCard Ontology
+## Properties from the vCard Ontology
 
 The Properties from the vCard Vocabulary are used to define contact options to
 persons and departments responsible for a service and address information to
@@ -934,7 +938,7 @@ information to physical sites of service points.
         rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
         rdfs:range xsd:string .
 
-# Properties from the Basic Geo Vocabulary
+## Properties from the Basic Geo Vocabulary
 
 The properties from the Basic Geo Vocabulary are used to define coordinates for
 a site of a service point.
@@ -958,7 +962,7 @@ concrete coordinates.
         rdfs:domain geo:Location ;
         rdfs:range rdfs:Literal .
 
-# Properties from the Organization Ontology
+## Properties from the Organization Ontology
 
 The properties from the Organization Ontology are used to define the
 relationships be- tween service points and service providers and to link them
