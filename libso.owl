@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:a="http://protege.stanford.edu/system#" xmlns:dct="http://purl.org/dc/terms/" xmlns:dso="http://purl.org/ontology/dso#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:gr="http://purl.org/goodrelations/v1#" xmlns:lso="http://purl.org/ontology/libso#" xmlns:org="http://www.w3.org/ns/org#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:s="http://schema.org/" xmlns:service="http://purl.org/ontology/service#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <dct:creator>Matthias Letsch</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <dct:description>An Ontology to define a classification of conventional services provided by libraries.</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-09</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <dct:title xml:lang="en">Library [Service Ontology]</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <vann:preferredNamespacePrefix>lso</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <vann:preferredNamespaceUri>http://purl.org/ontology/libso#</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso">
+    <owl:versionInfo>0.1</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryService">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryService">
+    <rdfs:label xml:lang="de">Bibliotheksdienstleistung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryService">
+    <rdfs:label xml:lang="en">Library Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryService">
+    <rdfs:comment>A kind of service provided by a library or a related Institution.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryService">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryService">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/service#Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryService">
+    <a:role>abstract</a:role>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SubService">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SubService">
+    <rdfs:label xml:lang="de">Dienstleistungsbestandteil</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SubService">
+    <rdfs:label xml:lang="en">Service Component</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SubService">
+    <rdfs:comment>Defines a single component of a higher-level service</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SubService">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SubService">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LibraryService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Local">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Local">
+    <rdfs:label xml:lang="de">Lokale Dienstleistung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Local">
+    <rdfs:label xml:lang="en">Local Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Local">
+    <rdfs:comment>A kind of service that is offered on site at the library.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Local">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Local">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LibraryService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalUsage">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalUsage">
+    <rdfs:label xml:lang="de">Lokale Bestandsbenutzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalUsage">
+    <rdfs:label xml:lang="en">Local Usage Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalUsage">
+    <rdfs:comment>A kind of service provided to take use of the library’s media collection.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalUsage">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalUsage">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#Local"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalUsage">
+    <owl:sameAs rdf:resource="http://purl.org/ontology/dso#documentService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#loan">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#loan">
+    <rdfs:label xml:lang="de">Fernleihe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#loan">
+    <rdfs:label xml:lang="en">Interloan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#loan">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/dso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#loan">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/dso#DocumentService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#loan">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#InterLoan">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#InterLoan">
+    <rdfs:label xml:lang="de">Fernleihe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#InterLoan">
+    <rdfs:label xml:lang="en">Interloan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#InterLoan">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/dso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#InterLoan">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/dso#DocumentService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#InterLoan">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ResearchStation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ResearchStation">
+    <rdfs:label xml:lang="de">Rechercheplatz</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ResearchStation">
+    <rdfs:label xml:lang="en">Research Station</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ResearchStation">
+    <rdfs:comment>A PC-Station provided for research within the library’s media collection.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ResearchStation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ResearchStation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Presentation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Presentation">
+    <rdfs:label xml:lang="de">Präsenzansicht</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Presentation">
+    <rdfs:label xml:lang="en">Presentation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Presentation">
+    <rdfs:comment>A service to provide space to use the media collection on site at the library, e.g. in a reading room.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Presentation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/dso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Presentation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/dso#documentService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Presentation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalUSage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalInformation">
+    <rdfs:label xml:lang="de">Lokale Informationsvermittlung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalInformation">
+    <rdfs:label xml:lang="en">Local Information Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalInformation">
+    <rdfs:comment>A kind of service provided to inform the library users on site in the library.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalInformation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalInformation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#Local"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#InformationCounter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#InformationCounter">
+    <rdfs:label xml:lang="de">Informationstheke</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#InformationCounter">
+    <rdfs:label xml:lang="en">Information Counter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#InformationCounter">
+    <rdfs:comment>A service provided to inform the library users at a service counter.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#InformationCounter">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#InformationCounter">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryTour">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryTour">
+    <rdfs:label xml:lang="de">Bibliotheksführung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryTour">
+    <rdfs:label xml:lang="en">Library Tour</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryTour">
+    <rdfs:comment>A service provided to guide the users through the library building and to show them the potential uses.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryTour">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LibraryTour">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#UserTraining">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#UserTraining">
+    <rdfs:label xml:lang="de">Nutzerschulung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#UserTraining">
+    <rdfs:label xml:lang="en">User Training</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#UserTraining">
+    <rdfs:comment>A service provided to train the users in research and use of the library’s media collection.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#UserTraining">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#UserTraining">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Registration">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Registration">
+    <rdfs:label xml:lang="de">Nutzeranmeldung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Registration">
+    <rdfs:label xml:lang="en">User Registration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Registration">
+    <rdfs:comment>An action to register a person as a library user and inform it about usage opportunities and conditions.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Registration">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Registration">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalWork">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalWork">
+    <rdfs:label xml:lang="de">Lokales Arbeiten</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalWork">
+    <rdfs:label xml:lang="en">Local Work</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalWork">
+    <rdfs:comment>A service for providing working space and opportunities to the users.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalWork">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#LocalWork">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#Local"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierOrScanner">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierOrScanner">
+    <rdfs:label xml:lang="de">Kopierer oder Scanner</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierOrScanner">
+    <rdfs:label xml:lang="en">Copier or Scanner</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierOrScanner">
+    <rdfs:comment>A service provided to enable users making personal copies or scans of documents.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierOrScanner">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierOrScanner">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierBlack">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierBlack">
+    <rdfs:label xml:lang="de">Schwarz-Weiß-Kopierer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierBlack">
+    <rdfs:label xml:lang="en">Black and White Copier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierBlack">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierBlack">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#CopierOrScanner"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierColor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierColor">
+    <rdfs:label xml:lang="de">Farbkopierer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierColor">
+    <rdfs:label xml:lang="en">Color Copier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierColor">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#CopierColor">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#CopierOrScanner"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Digitization">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Digitization">
+    <rdfs:label xml:lang="en">Scanner</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Digitization">
+    <a:role>concrete</a:role>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Digitization">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/dso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#Digitization">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#CopierOrScanner"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#GroupWorkSpace">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#GroupWorkSpace">
+    <rdfs:label xml:lang="de">Gruppenarbeitsraum</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#GroupWorkSpace">
+    <rdfs:label xml:lang="en">Group Work Room</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#GroupWorkSpace">
+    <rdfs:comment>A service to provide working space for groups of users.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#GroupWorkSpace">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#GroupWorkSpace">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#IndividualWorkSpace">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#IndividualWorkSpace">
+    <rdfs:label xml:lang="de">Einzelarbeitsplatz</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#IndividualWorkSpace">
+    <rdfs:label xml:lang="en">Individual Work Space</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#IndividualWorkSpace">
+    <rdfs:comment>A service to provide the opportunity for individual work for a single user.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#IndividualWorkSpace">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#IndividualWorkSpace">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PCWorkStation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PCWorkStation">
+    <rdfs:label xml:lang="de">PC-Arbeitsplatz</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PCWorkStation">
+    <rdfs:label xml:lang="en">PC Work Station</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PCWorkStation">
+    <rdfs:comment>A service to provide the opportunity to do work on a PC.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PCWorkStation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PCWorkStation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PhotoService">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PhotoService">
+    <rdfs:label xml:lang="de">Fotodienst</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PhotoService">
+    <rdfs:label xml:lang="en">Photo Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PhotoService">
+    <rdfs:comment>a service provided to generate photographs for the users.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PhotoService">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PhotoService">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LocalWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBased">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBased">
+    <rdfs:label xml:lang="de">Internetbasierte Dienstleistung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBased">
+    <rdfs:label xml:lang="en">Web Based Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBased">
+    <rdfs:comment>A kind of online service provided on the library’s website.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBased">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBased">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#LibraryService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedUsage">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedUsage">
+    <rdfs:label xml:lang="de">Internetbasierte Bestandsbenutzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedUsage">
+    <rdfs:label xml:lang="en">Web Based Usage Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedUsage">
+    <rdfs:comment>A kind of online service provided to gain access to parts of the media collection on the web.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedUsage">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedUsage">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#WebBased"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Catalogue">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Catalogue">
+    <rdfs:label xml:lang="de">Katalog</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Catalogue">
+    <rdfs:label xml:lang="en">Catalogue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Catalogue">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Catalogue">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#WebBasedUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Database">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Database">
+    <rdfs:label xml:lang="de">Datenbank</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Database">
+    <rdfs:label xml:lang="en">Database</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Database">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Database">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#WebBasedUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#OpenAccess">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#OpenAccess">
+    <rdfs:label xml:lang="en">Open Access</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#OpenAccess">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/dso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#OpenAccess">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/dso#DocumentService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#OpenAccess">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#WebBasedUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Recommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Recommendation">
+    <rdfs:label xml:lang="en">Anschaffungsempfehlung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Recommendation">
+    <rdfs:label xml:lang="en">Purchase Recommendation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Recommendation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Recommendation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#WebBasedUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedInformation">
+    <rdfs:label xml:lang="de">Internetbasierter Auskunftsdienst</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedInformation">
+    <rdfs:label xml:lang="en">Web Based Information Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedInformation">
+    <rdfs:comment>a kind of online service provided to inform the users on the web.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedInformation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#WebBasedInformation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#WebBased"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#OnlineInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#OnlineInformation">
+    <rdfs:label xml:lang="de">Internetbasierter Auskunftsdienst</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#OnlineInformation">
+    <rdfs:label xml:lang="en">Online Information</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#OnlineInformation">
+    <rdfs:comment>a kind of online service provided to inform the users on the web via chat or email etc.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#OnlineInformation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#OnlineInformation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#WebBasedInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Condition">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Condition">
+    <rdfs:label xml:lang="de">Nutzungskondition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Condition">
+    <rdfs:label xml:lang="en">Condition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Condition">
+    <rdfs:comment>Defines the terms of use for a service.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Condition">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Condition">
+    <owl:sameAs rdf:resource="http://purl.org/ontology/service#ServiceLimitation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PointOfService">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PointOfService">
+    <rdfs:label xml:lang="de">Servicepunkt</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PointOfService">
+    <rdfs:label xml:lang="en">Point of Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PointOfService">
+    <rdfs:comment>defines a physical site where a local service is available.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PointOfService">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PointOfService">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSUnit">
+    <rdfs:label xml:lang="de">Teilorganisation als Servicepunkt</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSUnit">
+    <rdfs:label xml:lang="en">Organizational Unit as Point Of Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSUnit">
+    <rdfs:comment>defines an organizational unit as a physical site where a local service is available.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSUnit">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSUnit">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#PointOfService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSUnit">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSBuilding">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSBuilding">
+    <rdfs:label xml:lang="de">Gebäude als Servicepunkt</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSBuilding">
+    <rdfs:label xml:lang="en">Building as Point Of Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSBuilding">
+    <rdfs:comment>defines a building as a physical site where a local service is available.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSBuilding">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSBuilding">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#PointOfService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSBuilding">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSDepartment">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSDepartment">
+    <rdfs:label xml:lang="de">Abteilung als Servicepunkt</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSDepartment">
+    <rdfs:label xml:lang="en">Department as Point Of Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSDepartment">
+    <rdfs:comment>defines a department as a physical site where a local service is available.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSDepartment">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSDepartment">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#PointOfService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#POSDepartment">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Licence">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Licence">
+    <rdfs:label xml:lang="de">Lizenz</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Licence">
+    <rdfs:label xml:lang="en">Licence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Licence">
+    <rdfs:comment>class defines conditions for access to databases given by licenses.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Licence">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Licence">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/libso#Condition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Free">
+    <rdf:type rdf:resource="http://purl.org/ontology/libso#Licence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Free">
+    <rdfs:Label xml:lang="de">Frei im Web verfügbar</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Free">
+    <rdfs:Label xml:lang="en">Free Online Access</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#Free">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ExternalAccess">
+    <rdf:type rdf:resource="http://purl.org/ontology/libso#Licence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ExternalAccess">
+    <rdfs:Label xml:lang="de">Externer Zugang für angemeldete Nutzer</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ExternalAccess">
+    <rdfs:Label xml:lang="en">External Access for registered Users</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#ExternalAccess">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#NationalLicence">
+    <rdf:type rdf:resource="http://purl.org/ontology/libso#Licence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#NationalLicence">
+    <rdfs:Label xml:lang="de">Nationallizenz</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#NationalLicence">
+    <rdfs:Label xml:lang="en">National Licence</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#NationalLicence">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SingleUser">
+    <rdf:type rdf:resource="http://purl.org/ontology/libso#Licence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SingleUser">
+    <rdfs:Label xml:lang="de">Einzelplatzversion</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SingleUser">
+    <rdfs:Label xml:lang="en">Sinlge User Version</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#SingleUser">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PayPerUse">
+    <rdf:type rdf:resource="http://purl.org/ontology/libso#Licence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PayPerUse">
+    <rdfs:Label xml:lang="de">Kostenpflichtiges Angebot</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PayPerUse">
+    <rdfs:Label xml:lang="en">Paid Offer</rdfs:Label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#PayPerUse">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#Service">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#Service">
+    <rdfs:label xml:lang="en">Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#Service">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#Service">
+    <rdfs:seeAlso rdf:resource="http://schema.org/Product"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#Service">
+    <rdfs:seeAlso rdf:resource="http://schema.org/Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#Service">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#Service">
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdfs:label xml:lang="en">ServiceProvider</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdfs:seeAlso rdf:resource="http://purl.org/goodrelations/v1#BusinessEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdfs:seeAlso rdf:resource="http://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdfs:seeAlso rdf:resource="http://schema.org/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#ServiceProvider">
+    <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#OpeningHoursSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#OpeningHoursSpecification">
+    <rdfs:label xml:lang="en">Opening hours specification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#OpeningHoursSpecification">
+    <rdfs:comment>This is a conceptual entity that holds together all information about the opening hours on a given day (gr:DayOfWeek).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#OpeningHoursSpecification">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#DayOfWeek">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#DayOfWeek">
+    <rdfs:label xml:lang="en">Day of Week</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#DayOfWeek">
+    <rdfs:comment>The day of the week, used to specify to which day the opening hours of a gr:OpeningHoursSpecification refer.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#DayOfWeek">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Monday">
+    <rdf:type rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Tuesday">
+    <rdf:type rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Wednesday">
+    <rdf:type rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Thursday">
+    <rdf:type rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Friday">
+    <rdf:type rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Saturday">
+    <rdf:type rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Sunday">
+    <rdf:type rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#UnitPriceSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#UnitPriceSpecification">
+    <rdfs:label xml:lang="en">Unit price specification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#UnitPriceSpecification">
+    <rdfs:comment>A unit price specification is a conceptual entity that 
+        specifies the price asked for a given gr:Offering by the respective gr:Business
+        Entity. An offering may be linked to multiple unit price specifications that
+        specify alternative prices for non-overlapping sets of conditions (e.g. 
+        quantities or sales regions) or with differing validity periods...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#UnitPriceSpecification">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individual</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object representing a single person or entity</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+    <owl:disjointWith rdf:resource="http://www.w3.org/2006/vcard/ns#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+    <owl:disjointWith rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object representing an organization. An organization
+        is a single entity, and might represent a business or government, a department
+        or division within a business or government, a club, an association, or the
+        like.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Email">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Email">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Email</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Email">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To specify the electronic mail address for communication
+        with the object the vCard represents. Use the hasEmail object property.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Email">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Email">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Voice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Voice">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Voice">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Voice">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Fax">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Fax">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fax</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Fax">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Fax">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To specify the components of the delivery address for the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Location">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:first rdf:resource="http://www.w3.org/ns/org#identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdfs:label xml:lang="en">Organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdfs:comment xml:lang="en">Represents a collection of people organized together into a
+        community or other social, commercial or political structure. The group has
+        some common purpose or reason for existence which goes beyond the set of
+        people belonging to it and can act as an Agent. Organizations are often 
+        decomposable into hierarchical structures. It is recommended that SKOS lexical labels
+        should be used to label the Organization. In particular `skos:prefLabel` for
+        the primary (possibly legally recognized name), `skos:altLabel` for alternative
+        names (trading names, colloquial names) and `skos:notation` to denote a
+        code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+    <owl:hasKey rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+    <rdfs:label xml:lang="en">OrganizationalUnit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+    <rdfs:comment xml:lang="en">An Organization such as a University Support Unit which is
+        part of some larger FormalOrganization and only has full recognition within
+        the context of that FormalOrganization, it is not a Legal Entity in its own
+        right. Units can be large and complex containing other Units and even
+        FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Site">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Site">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Site">
+    <rdfs:label xml:lang="en">Site</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Site">
+    <rdfs:comment xml:lang="en">An office or other premise at which the organization is
+        located. Many organizations are spread across multiple sites and many sites will
+        host multiple locations. In most cases a Site will be a physical location.
+        However, we don't exclude the possibility of non-physical sites such as a
+        virtual office with an associated post box and phone reception service. 
+        Extensions may provide subclasses to denote particular types of site.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#Site">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPointOfService">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPointOfService">
+    <rdfs:label xml:lang="de">verfügbar am Standort</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPointOfService">
+    <rdfs:label xml:lang="en">has point of service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPointOfService">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#Local"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPointOfService">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPointOfService">
+    <rdfs:range rdf:resource="http://purl.org/ontology/libso#PointOfService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasAccessURL">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasAccessURL">
+    <rdfs:label xml:lang="de">Zugang über URL</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasAccessURL">
+    <rdfs:label xml:lang="en">has access URL</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasAccessURL">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#WebBased"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasAccessURL">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasAccessURL">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasOptionalWebAccess">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasOptionalWebAccess">
+    <rdfs:label xml:lang="de">Alternativer Internetzugang</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasOptionalWebAccess">
+    <rdfs:label xml:lang="en">has optional web access</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasOptionalWebAccess">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#Local"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasOptionalWebAccess">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasOptionalWebAccess">
+    <rdfs:range rdf:resource="http://purl.org/ontology/libso#WebBased"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasCondition">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasCondition">
+    <rdfs:label xml:lang="de">Nutzungskonditionen</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasCondition">
+    <rdfs:label xml:lang="en">has condition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasCondition">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#LibraryService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasCondition">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasCondition">
+    <rdfs:range rdf:resource="http://purl.org/ontology/libso#Condition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#relatedDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#relatedDocument">
+    <rdfs:label xml:lang="de">Zugehöriges Dokument</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#relatedDocument">
+    <rdfs:label xml:lang="en">related Document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#relatedDocument">
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Condition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#relatedDocument">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#relatedDocument">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPeriodTime">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPeriodTime">
+    <rdfs:label xml:lang="de">zugehörige Frist</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPeriodTime">
+    <rdfs:label xml:lang="en">has Period Time</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPeriodTime">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#Condition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPeriodTime">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasPeriodTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasLicence">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasLicence">
+    <rdfs:label xml:lang="de">unter Lizenz</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasLicence">
+    <rdfs:label xml:lang="en">has Licence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasLicence">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#WebBasedUsage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasLicence">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#hasLicence">
+    <rdfs:range rdf:resource="http://purl.org/ontology/libso#Licence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#staffContact">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#staffContact">
+    <rdfs:label xml:lang="de">Kontakt zum Personal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#staffContact">
+    <rdfs:label xml:lang="en">staff Contact</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#staffContact">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#LibraryService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#staffContact">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#staffContact">
+    <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#staffContact">
+    <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#floor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#floor">
+    <rdfs:label xml:lang="de">Etage oder Ebene</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#floor">
+    <rdfs:label xml:lang="en">floor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#floor">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#POSDepartment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#floor">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#floor">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#room">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#room">
+    <rdfs:label xml:lang="de">Zimmernummer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#room">
+    <rdfs:label xml:lang="en">room number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#room">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#POSDepartment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#room">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/libso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/libso#room">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#provides">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#provides">
+    <rdfs:label xml:lang="en">provides</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#provides">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/service#ServiceProvider"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#provides">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#provides">
+    <rdfs:range rdf:resource="http://purl.org/ontology/service#Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#provides">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/service#providedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#providedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#providedBy">
+    <rdfs:label xml:lang="en">providedBy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#providedBy">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/service#Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#providedBy">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#providedBy">
+    <rdfs:range rdf:resource="http://purl.org/ontology/service#ServiceProvider"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#providedBy">
+    <rdfs:seeAlso rdf:resource="http://schema.org/provider"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/service#providedBy">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/service#provides"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:label xml:lang="en">has opening hours specification (0..*)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:comment>For use in LSO: This property links a lso:Local to a gr:OpeningHoursSpecification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:comment>This property links a gr:Location to a gr:OpeningHoursSpecification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#Local"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:domain rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursSpecification">
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#OpeingHoursSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#opens">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#opens">
+    <rdfs:label xml:lang="en">opens (1..1)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#opens">
+    <rdfs:comment>The opening hour of the gr:Location on the given gr:DayOf- Week...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#opens">
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#OpeningHoursSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#opens">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#opens">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#closes">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#closes">
+    <rdfs:label xml:lang="en">closes (1..1)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#closes">
+    <rdfs:comment>The closing hour of the gr:Location on the given gr:DayOfWeek...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#closes">
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#OpeningHoursSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#closes">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#closes">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek">
+    <rdfs:label xml:lang="en">has opening hours day of week (1..*)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek">
+    <rdfs:comment>This specifies the gr:DayOfWeek to which the gr:OpeningHoursSpecification is related...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek">
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#OpeningHoursSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek">
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#DayOfWeek"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:label xml:lang="en">has price specification (0..*)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:comment>For use in LSO: This property links a lso:LibraryService to a gr:PriceSpecification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:comment>This links a gr:Offering to a gr:PriceSpecification or specifications...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#Offering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/libso#LibraryService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:domain rdf:resource="http://schema.org/Offer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasPriceSpecification">
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#PriceSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrency">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrency">
+    <rdfs:label xml:lang="en">has currency (1..1)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrency">
+    <rdfs:comment>The currency for all prices in the gr:PriceSpecification given using the ISO 4217 standard (3 characters).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrency">
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#PriceSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrency">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrency">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrencyValue">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrencyValue">
+    <rdfs:label xml:lang="en">has currency value (0..1)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrencyValue">
+    <rdfs:comment>This property specifies the amount of money for a price per
+    unit, shipping charges, or payment charges. The currency and other relevant
+    details are attached to the respective gr:PriceSpecification etc...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrencyValue">
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#PriceSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrencyValue">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#hasCurrencyValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formatted name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
+    <rdfs:comment>The formatted text corresponding to the name of the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#organization-name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#organization-name">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organization name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#organization-name">
+    <rdfs:comment>To specify the organizational name associated with the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#organization-name">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#organization-name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has email</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To specify the electronic mail address for communication with the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+    <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Email"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has telephone</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To specify the telephone number for telephony communication with the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#tel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasValue">
+    <rdfs:label xml:lang="en">has value</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasValue">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasValue">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Used to indicate the resource value of an object property that requires property parameters</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has address</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To specify the components of the delivery address for the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+    <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
+    <rdfs:comment>The country name associated with the address of the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locality</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+    <rdfs:comment>The locality (e.g. city or town) associated with the address of the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">postal code</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+    <rdfs:comment>The postal code associated with the address of the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">street address</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+    <rdfs:comment>The street address associated with the address of the object</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+    <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdfs:label xml:lang="en">has Unit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdfs:comment xml:lang="en">Indicates a unit which is part of this Organization, e.g. a
+        Department within a larger FormalOrganization. Inverse of `org:unitOf`.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdfs:label xml:lang="en">unit Of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdfs:comment xml:lang="en">Indicates an Organization of which this Unit is a part, e.g.
+    a Department within a larger FormalOrganization. This is the inverse of
+    `org:hasUnit`.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#unitOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#subOrganizationOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasSite">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasSite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasSite">
+    <rdfs:label xml:lang="en">has site</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasSite">
+    <rdfs:comment xml:lang="en">Indicates a site at which the Organization has some presence
+    even if only indirect (e.g. virtual office or a professional service which is
+    acting as the registered address for a company). Inverse of `org:siteOf`.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasSite">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasSite">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#hasSite">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+  </rdf:Description>
+</rdf:RDF>
