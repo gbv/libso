@@ -123,11 +123,11 @@ kind of service provided to take use of the library’s media collection.
         rdfs:subClassOf lso:Local ;
         owl:sameAs dso:DocumentService .
 
-**Loan:** A loan is a typical library loan service. The class dso:loan is part
+**Loan:** A loan is a typical library loan service. The class dso:Loan is part
 of the [Document Service Ontology].
 
-    dso:loan a rdfs:Class ;
-        rdfs:label "Fernleihe"@de, "Interloan"@en ;
+    dso:Loan a rdfs:Class ;
+        rdfs:label "Ausleihe"@de, "Loan"@en ;
         rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
         rdfs:subClassOf dso:DocumentService, lso:LocalUsage .
 
