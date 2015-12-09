@@ -133,7 +133,7 @@ of the [Document Service Ontology].
 
 **Interlibrary Loan:** An interlibrary loan is a typical library service to
 provide access to physical documents from other libraries. The class
-dso:interloan is part of the Document Service ontology.
+dso:Interloan is part of the Document Service ontology.
 
     dso:InterLoan a rdfs:Class ;
         rdfs:label "Fernleihe"@de, "Interloan"@en ;
