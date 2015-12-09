@@ -604,11 +604,11 @@ service.
 
     gr:UnitPriceSpecification a rdfs:Class ;
         rdfs:label "Unit price specification"@en ;
-        rdfs:comment """A unit price specification is a conceptual entity that 
+        rdfs:comment "A unit price specification is a conceptual entity that 
             specifies the price asked for a given gr:Offering by the respective gr:Business
             Entity. An offering may be linked to multiple unit price specifications that
             specify alternative prices for non-overlapping sets of conditions (e.g. 
-            quantities or sales regions) or with differing validity periods...""" ;
+            quantities or sales regions) or with differing validity periods..." ;
         rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> .
 
 ## Classes from the vCard Ontology
@@ -630,10 +630,10 @@ case, it is used to represent a contactable department responsible for a certain
 
     vcard:Organization a owl:Class ;
         rdfs:label "Organization"^^xsd:string ;
-        rdfs:comment """An object representing an organization. An organization
+        rdfs:comment "An object representing an organization. An organization
             is a single entity, and might represent a business or government, a department
             or division within a business or government, a club, an association, or the
-            like."""^^xsd:string;
+            like."^^xsd:string;
         rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
         rdfs:subClassOf vcard:Kind .
 
@@ -642,8 +642,8 @@ link an email address to a person or department responsible for a certain servic
 
     vcard:Email a owl:Class ;
         rdfs:label "Email"^^xsd:string ;
-        rdfs:comment """To specify the electronic mail address for communication
-            with the object the vCard represents. Use the hasEmail object property."""^^xsd:string ;
+        rdfs:comment "To specify the electronic mail address for communication
+            with the object the vCard represents. Use the hasEmail object property."^^xsd:string ;
         rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
         owl:deprecated true .
 
@@ -686,7 +686,7 @@ to define service providers of service:ServiceProvider as Organizations.
 
     org:Organization a rdfs:Class, owl:Class ;
         rdfs:label "Organization"@en ;
-        rdfs:comment """Represents a collection of people organized together into a
+        rdfs:comment "Represents a collection of people organized together into a
             community or other social, commercial or political structure. The group has
             some common purpose or reason for existence which goes beyond the set of
             people belonging to it and can act as an Agent. Organizations are often 
@@ -694,7 +694,7 @@ to define service providers of service:ServiceProvider as Organizations.
             should be used to label the Organization. In particular `skos:prefLabel` for
             the primary (possibly legally recognized name), `skos:altLabel` for alternative
             names (trading names, colloquial names) and `skos:notation` to denote a
-            code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"""@en ;
+            code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"@en ;
         rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
         rdfs:subClassOf foaf:Agent ;
         owl:equivalentClass foaf:Organization ;
@@ -706,11 +706,11 @@ Instances of service:ServiceProvider.
 
     org:OrganizationalUnit a rdfs:Class, owl:Class ;
         rdfs:label "OrganizationalUnit"@en ;
-        rdfs:comment """An Organization such as a University Support Unit which is
+        rdfs:comment "An Organization such as a University Support Unit which is
             part of some larger FormalOrganization and only has full recognition within
             the context of that FormalOrganization, it is not a Legal Entity in its own
             right. Units can be large and complex containing other Units and even
-            FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"""@en ;
+            FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"@en ;
         rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
         rdfs:subClassOf org:Organization .
 
@@ -719,12 +719,12 @@ physical site for any service point of lso:PointOfService.
 
     org:Site a rdfs:Class, owl:Class ;
         rdfs:label "Site"@en ;
-        rdfs:comment """An office or other premise at which the organization is
+        rdfs:comment "An office or other premise at which the organization is
             located. Many organizations are spread across multiple sites and many sites will
             host multiple locations. In most cases a Site will be a physical location.
             However, we don't exclude the possibility of non-physical sites such as a
             virtual office with an associated post box and phone reception service. 
-            Extensions may provide subclasses to denote particular types of site."""@en ;
+            Extensions may provide subclasses to denote particular types of site."@en ;
         rdfs:isDefinedBy <http://www.w3.org/ns/org> .
 
 ## Properties from the Service Ontology
@@ -831,9 +831,9 @@ modified slightly. Comments are partially shortened compared to the original.
 
     gr:hasCurrencyValue a rdf:Property ;
         rdfs:label "has currency value (0..1)"@en ;
-        rdfs:comment """This property specifies the amount of money for a price per
+        rdfs:comment "This property specifies the amount of money for a price per
         unit, shipping charges, or payment charges. The currency and other relevant
-        details are attached to the respective gr:PriceSpecification etc...""" ;
+        details are attached to the respective gr:PriceSpecification etc..." ;
         rdfs:domain gr:PriceSpecification ;
         rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
         rdfs:range xsd:float .
@@ -961,8 +961,8 @@ to a physical Site.
     org:hasUnit a rdf:Property,
         owl:ObjectProperty ;
         rdfs:label "has Unit"@en ;
-        rdfs:comment """Indicates a unit which is part of this Organization, e.g. a
-            Department within a larger FormalOrganization. Inverse of `org:unitOf`."""@en ;
+        rdfs:comment "Indicates a unit which is part of this Organization, e.g. a
+            Department within a larger FormalOrganization. Inverse of `org:unitOf`."@en ;
         rdfs:domain org:FormalOrganization ;
         rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
         rdfs:range org:OrganizationalUnit ;
@@ -973,9 +973,9 @@ to a physical Site.
     org:unitOf a rdf:Property,
         owl:ObjectProperty ;
         rdfs:label "unit Of"@en ;
-        rdfs:comment """Indicates an Organization of which this Unit is a part, e.g.
+        rdfs:comment "Indicates an Organization of which this Unit is a part, e.g.
         a Department within a larger FormalOrganization. This is the inverse of
-        `org:hasUnit`."""@en ;
+        `org:hasUnit`."@en ;
         rdfs:domain org:OrganizationalUnit ;
         rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
         rdfs:range org:FormalOrganization ;
@@ -986,9 +986,9 @@ to a physical Site.
     org:hasSite a rdf:Property,
         owl:ObjectProperty ;
         rdfs:label "has site"@en ;
-        rdfs:comment """Indicates a site at which the Organization has some presence
+        rdfs:comment "Indicates a site at which the Organization has some presence
         even if only indirect (e.g. virtual office or a professional service which is
-        acting as the registered address for a company). Inverse of `org:siteOf`."""@en ;
+        acting as the registered address for a company). Inverse of `org:siteOf`."@en ;
         rdfs:domain org:Organization ;
         rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
         rdfs:range org:Site .
