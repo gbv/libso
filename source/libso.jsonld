@@ -1,0 +1,1821 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dso": "http://purl.org/ontology/dso#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "gr": "http://purl.org/goodrelations/v1#",
+    "lso": "http://purl.org/ontology/libso#",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "service": "http://purl.org/ontology/service#",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "voaf": "http://purl.org/vocommons/voaf#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "lso:Licence",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "class defines conditions for access to databases given by licenses.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Licence"
+        },
+        {
+          "@language": "de",
+          "@value": "Lizenz"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:Condition"
+      }
+    },
+    {
+      "@id": "lso:SingleUser",
+      "@type": "lso:Licence",
+      "rdfs:Label": [
+        {
+          "@language": "de",
+          "@value": "Einzelplatzversion"
+        },
+        {
+          "@language": "en",
+          "@value": "Sinlge User Version"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      }
+    },
+    {
+      "@id": "gr:Wednesday",
+      "@type": "gr:DayOfWeek"
+    },
+    {
+      "@id": "lso:CopierOrScanner",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service provided to enable users making personal copies or scans of documents.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Copier or Scanner"
+        },
+        {
+          "@language": "de",
+          "@value": "Kopierer oder Scanner"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalWork"
+      }
+    },
+    {
+      "@id": "lso:POSUnit",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "defines an organizational unit as a physical site where a local service is available.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Teilorganisation als Servicepunkt"
+        },
+        {
+          "@language": "en",
+          "@value": "Organizational Unit as Point Of Service"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "lso:PointOfService"
+        },
+        {
+          "@id": "org:OrganizationalUnit"
+        }
+      ]
+    },
+    {
+      "@id": "vcard:Email",
+      "@type": "owl:Class",
+      "owl:deprecated": true,
+      "rdfs:comment": "To specify the electronic mail address for communication\n        with the object the vCard represents. Use the hasEmail object property.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "Email"
+    },
+    {
+      "@id": "gr:Monday",
+      "@type": "gr:DayOfWeek"
+    },
+    {
+      "@id": "lso:PCWorkStation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service to provide the opportunity to do work on a PC.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "PC Work Station"
+        },
+        {
+          "@language": "de",
+          "@value": "PC-Arbeitsplatz"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalWork"
+      }
+    },
+    {
+      "@id": "gr:Friday",
+      "@type": "gr:DayOfWeek"
+    },
+    {
+      "@id": "service:provides",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "service:providedBy"
+      },
+      "rdfs:domain": {
+        "@id": "service:ServiceProvider"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/service"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "provides"
+      },
+      "rdfs:range": {
+        "@id": "service:Service"
+      }
+    },
+    {
+      "@id": "http://purl.org/ontology/libso",
+      "@type": [
+        "owl:Ontology",
+        "voaf:Vocabulary"
+      ],
+      "dcterms:creator": "Matthias Letsch",
+      "dcterms:description": "An Ontology to define a classification of conventional services provided by libraries.",
+      "dcterms:modified": {
+        "@type": "xsd:date",
+        "@value": "2014-02-12"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "Library Service Ontology"
+      },
+      "owl:versionInfo": "0.1.1",
+      "vann:preferredNamespacePrefix": "lso",
+      "vann:preferredNamespaceUri": "http://purl.org/ontology/libso#"
+    },
+    {
+      "@id": "lso:IndividualWorkSpace",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service to provide the opportunity for individual work for a single user.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Einzelarbeitsplatz"
+        },
+        {
+          "@language": "en",
+          "@value": "Individual Work Space"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalWork"
+      }
+    },
+    {
+      "@id": "gr:UnitPriceSpecification",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A unit price specification is a conceptual entity that \n        specifies the price asked for a given gr:Offering by the respective gr:Business\n        Entity. An offering may be linked to multiple unit price specifications that\n        specify alternative prices for non-overlapping sets of conditions (e.g. \n        quantities or sales regions) or with differing validity periods...",
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Unit price specification"
+      }
+    },
+    {
+      "@id": "lso:hasPointOfService",
+      "@type": "rdf:Property",
+      "rdfs:domain": {
+        "@id": "lso:Local"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "verfügbar am Standort"
+        },
+        {
+          "@language": "en",
+          "@value": "has point of service"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "lso:PointOfService"
+      }
+    },
+    {
+      "@id": "gr:hasOpeningHoursSpecification",
+      "@type": "rdf:Property",
+      "rdfs:comment": [
+        "For use in LSO: This property links a lso:Local to a gr:OpeningHoursSpecification.",
+        "This property links a gr:Location to a gr:OpeningHoursSpecification."
+      ],
+      "rdfs:domain": [
+        {
+          "@id": "lso:Local"
+        },
+        {
+          "@id": "gr:Location"
+        },
+        {
+          "@id": "schema:Place"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has opening hours specification (0..*)"
+      },
+      "rdfs:range": {
+        "@id": "gr:OpeingHoursSpecification"
+      }
+    },
+    {
+      "@id": "lso:Local",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A kind of service that is offered on site at the library.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Lokale Dienstleistung"
+        },
+        {
+          "@language": "en",
+          "@value": "Local Service"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LibraryService"
+      }
+    },
+    {
+      "@id": "vcard:Organization",
+      "@type": "owl:Class",
+      "rdfs:comment": "An object representing an organization. An organization\n        is a single entity, and might represent a business or government, a department\n        or division within a business or government, a club, an association, or the\n        like.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "Organization",
+      "rdfs:subClassOf": {
+        "@id": "vcard:Kind"
+      }
+    },
+    {
+      "@id": "gr:closes",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The closing hour of the gr:Location on the given gr:DayOfWeek...",
+      "rdfs:domain": {
+        "@id": "gr:OpeningHoursSpecification"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "closes (1..1)"
+      },
+      "rdfs:range": {
+        "@id": "xsd:time"
+      }
+    },
+    {
+      "@id": "gr:Sunday",
+      "@type": "gr:DayOfWeek"
+    },
+    {
+      "@id": "lso:CopierBlack",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Schwarz-Weiß-Kopierer"
+        },
+        {
+          "@language": "en",
+          "@value": "Black and White Copier"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:CopierOrScanner"
+      }
+    },
+    {
+      "@id": "lso:Free",
+      "@type": "lso:Licence",
+      "rdfs:Label": [
+        {
+          "@language": "en",
+          "@value": "Free Online Access"
+        },
+        {
+          "@language": "de",
+          "@value": "Frei im Web verfügbar"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      }
+    },
+    {
+      "@id": "lso:room",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "lso:POSDepartment"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "room number"
+        },
+        {
+          "@language": "de",
+          "@value": "Zimmernummer"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "lso:floor",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "lso:POSDepartment"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Etage oder Ebene"
+        },
+        {
+          "@language": "en",
+          "@value": "floor"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "vcard:Fax",
+      "@type": "owl:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "Fax",
+      "rdfs:subClassOf": {
+        "@id": "vcard:TelephoneType"
+      }
+    },
+    {
+      "@id": "lso:NationalLicence",
+      "@type": "lso:Licence",
+      "rdfs:Label": [
+        {
+          "@language": "en",
+          "@value": "National Licence"
+        },
+        {
+          "@language": "de",
+          "@value": "Nationallizenz"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      }
+    },
+    {
+      "@id": "dso:loan",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/dso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Fernleihe"
+        },
+        {
+          "@language": "en",
+          "@value": "Interloan"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "dso:DocumentService"
+        },
+        {
+          "@id": "lso:LocalUsage"
+        }
+      ]
+    },
+    {
+      "@id": "lso:LocalWork",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service for providing working space and opportunities to the users.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Local Work"
+        },
+        {
+          "@language": "de",
+          "@value": "Lokales Arbeiten"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:Local"
+      }
+    },
+    {
+      "@id": "lso:Condition",
+      "@type": "rdfs:Class",
+      "owl:sameAs": {
+        "@id": "service:ServiceLimitation"
+      },
+      "rdfs:comment": "Defines the terms of use for a service.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Nutzungskondition"
+        },
+        {
+          "@language": "en",
+          "@value": "Condition"
+        }
+      ]
+    },
+    {
+      "@id": "lso:hasOptionalWebAccess",
+      "@type": "rdf:Property",
+      "rdfs:domain": {
+        "@id": "lso:Local"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has optional web access"
+        },
+        {
+          "@language": "de",
+          "@value": "Alternativer Internetzugang"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "lso:WebBased"
+      }
+    },
+    {
+      "@id": "lso:hasCondition",
+      "@type": "rdf:Property",
+      "rdfs:domain": {
+        "@id": "lso:LibraryService"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has condition"
+        },
+        {
+          "@language": "de",
+          "@value": "Nutzungskonditionen"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "lso:Condition"
+      }
+    },
+    {
+      "@id": "lso:InformationCounter",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service provided to inform the library users at a service counter.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Information Counter"
+        },
+        {
+          "@language": "de",
+          "@value": "Informationstheke"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalInformation"
+      }
+    },
+    {
+      "@id": "org:hasUnit",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Indicates a unit which is part of this Organization, e.g. a\n        Department within a larger FormalOrganization. Inverse of `org:unitOf`."
+      },
+      "rdfs:domain": {
+        "@id": "org:FormalOrganization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/ns/org"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has Unit"
+      },
+      "rdfs:range": {
+        "@id": "org:OrganizationalUnit"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "org:hasSubOrganization"
+      }
+    },
+    {
+      "@id": "lso:PhotoService",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "a service provided to generate photographs for the users.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Fotodienst"
+        },
+        {
+          "@language": "en",
+          "@value": "Photo Service"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalWork"
+      }
+    },
+    {
+      "@id": "gr:Tuesday",
+      "@type": "gr:DayOfWeek"
+    },
+    {
+      "@id": "lso:relatedDocument",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "rdfs:Condition"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "related Document"
+        },
+        {
+          "@language": "de",
+          "@value": "Zugehöriges Dokument"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "vcard:hasTelephone",
+      "@type": "owl:ObjectProperty",
+      "owl:equivalentProperty": {
+        "@id": "vcard:tel"
+      },
+      "rdfs:comment": "To specify the telephone number for telephony communication with the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "has telephone"
+    },
+    {
+      "@id": "lso:WebBasedUsage",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A kind of online service provided to gain access to parts of the media collection on the web.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Web Based Usage Service"
+        },
+        {
+          "@language": "de",
+          "@value": "Internetbasierte Bestandsbenutzung"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:WebBased"
+      }
+    },
+    {
+      "@id": "gr:hasCurrencyValue",
+      "@type": "rdf:Property",
+      "rdfs:comment": "This property specifies the amount of money for a price per\n    unit, shipping charges, or payment charges. The currency and other relevant\n    details are attached to the respective gr:PriceSpecification etc...",
+      "rdfs:domain": {
+        "@id": "gr:PriceSpecification"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has currency value (0..1)"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      }
+    },
+    {
+      "@id": "dso:Digitization",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/dso"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Scanner"
+      },
+      "rdfs:subClassOf": {
+        "@id": "lso:CopierOrScanner"
+      }
+    },
+    {
+      "@id": "lso:LibraryService",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A kind of service provided by a library or a related Institution.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Bibliotheksdienstleistung"
+        },
+        {
+          "@language": "en",
+          "@value": "Library Service"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "service:Service"
+      }
+    },
+    {
+      "@id": "lso:GroupWorkSpace",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service to provide working space for groups of users.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Gruppenarbeitsraum"
+        },
+        {
+          "@language": "en",
+          "@value": "Group Work Room"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalWork"
+      }
+    },
+    {
+      "@id": "service:Service",
+      "@type": "owl:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/service"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Service"
+      },
+      "rdfs:seeAlso": [
+        {
+          "@id": "schema:Product"
+        },
+        {
+          "@id": "schema:Service"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "dcterms:Service"
+        },
+        {
+          "@id": "gr:ProductOrService"
+        }
+      ]
+    },
+    {
+      "@id": "vcard:street-address",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The street address associated with the address of the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "street address",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "lso:hasAccessURL",
+      "@type": "rdf:Property",
+      "rdfs:domain": {
+        "@id": "lso:WebBased"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Zugang über URL"
+        },
+        {
+          "@language": "en",
+          "@value": "has access URL"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "lso:Registration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An action to register a person as a library user and inform it about usage opportunities and conditions.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "User Registration"
+        },
+        {
+          "@language": "de",
+          "@value": "Nutzeranmeldung"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalInformation"
+      }
+    },
+    {
+      "@id": "lso:PointOfService",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "defines a physical site where a local service is available.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Point of Service"
+        },
+        {
+          "@language": "de",
+          "@value": "Servicepunkt"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "org:OrganizationalUnit"
+      }
+    },
+    {
+      "@id": "lso:LibraryTour",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service provided to guide the users through the library building and to show them the potential uses.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Bibliotheksführung"
+        },
+        {
+          "@language": "en",
+          "@value": "Library Tour"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalInformation"
+      }
+    },
+    {
+      "@id": "gr:hasPriceSpecification",
+      "@type": "rdf:Property",
+      "rdfs:comment": [
+        "This links a gr:Offering to a gr:PriceSpecification or specifications...",
+        "For use in LSO: This property links a lso:LibraryService to a gr:PriceSpecification."
+      ],
+      "rdfs:domain": [
+        {
+          "@id": "lso:LibraryService"
+        },
+        {
+          "@id": "schema:Offer"
+        },
+        {
+          "@id": "gr:Offering"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has price specification (0..*)"
+      },
+      "rdfs:range": {
+        "@id": "gr:PriceSpecification"
+      }
+    },
+    {
+      "@id": "lso:POSDepartment",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "defines a department as a physical site where a local service is available.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Abteilung als Servicepunkt"
+        },
+        {
+          "@language": "en",
+          "@value": "Department as Point Of Service"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "lso:PointOfService"
+        },
+        {
+          "@id": "org:OrganizationalUnit"
+        }
+      ]
+    },
+    {
+      "@id": "vcard:postal-code",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The postal code associated with the address of the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "postal code",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "org:OrganizationalUnit",
+      "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An Organization such as a University Support Unit which is\n        part of some larger FormalOrganization and only has full recognition within\n        the context of that FormalOrganization, it is not a Legal Entity in its own\n        right. Units can be large and complex containing other Units and even\n        FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/ns/org"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "OrganizationalUnit"
+      },
+      "rdfs:subClassOf": {
+        "@id": "org:Organization"
+      }
+    },
+    {
+      "@id": "vcard:Address",
+      "@type": "owl:Class",
+      "rdfs:comment": "To specify the components of the delivery address for the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "Address"
+    },
+    {
+      "@id": "lso:UserTraining",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service provided to train the users in research and use of the library’s media collection.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "User Training"
+        },
+        {
+          "@language": "de",
+          "@value": "Nutzerschulung"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalInformation"
+      }
+    },
+    {
+      "@id": "lso:LocalInformation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A kind of service provided to inform the library users on site in the library.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Lokale Informationsvermittlung"
+        },
+        {
+          "@language": "en",
+          "@value": "Local Information Service"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:Local"
+      }
+    },
+    {
+      "@id": "vcard:Voice",
+      "@type": "owl:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "Voice",
+      "rdfs:subClassOf": {
+        "@id": "vcard:TelephoneType"
+      }
+    },
+    {
+      "@id": "vcard:organization-name",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "To specify the organizational name associated with the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "organization name",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "lso:LocalUsage",
+      "@type": "rdfs:Class",
+      "owl:sameAs": {
+        "@id": "dso:documentService"
+      },
+      "rdfs:comment": "A kind of service provided to take use of the library’s media collection.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Local Usage Service"
+        },
+        {
+          "@language": "de",
+          "@value": "Lokale Bestandsbenutzung"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:Local"
+      }
+    },
+    {
+      "@id": "service:ServiceProvider",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/service"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ServiceProvider"
+      },
+      "rdfs:seeAlso": [
+        {
+          "@id": "dcterms:agent"
+        },
+        {
+          "@id": "foaf:agent"
+        },
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:person"
+        },
+        {
+          "@id": "gr:BusinessEntity"
+        }
+      ]
+    },
+    {
+      "@id": "dso:InterLoan",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/dso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Fernleihe"
+        },
+        {
+          "@language": "en",
+          "@value": "Interloan"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "lso:LocalUsage"
+        },
+        {
+          "@id": "dso:DocumentService"
+        }
+      ]
+    },
+    {
+      "@id": "lso:CopierColor",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Color Copier"
+        },
+        {
+          "@language": "de",
+          "@value": "Farbkopierer"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:CopierOrScanner"
+      }
+    },
+    {
+      "@id": "geo:Location",
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "lso:staffContact",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "lso:LibraryService"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "staff Contact"
+        },
+        {
+          "@language": "de",
+          "@value": "Kontakt zum Personal"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "vcard:Organization"
+        },
+        {
+          "@id": "vcard:Individual"
+        }
+      ]
+    },
+    {
+      "@id": "lso:Catalogue",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Katalog"
+        },
+        {
+          "@language": "en",
+          "@value": "Catalogue"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:WebBasedUsage"
+      }
+    },
+    {
+      "@id": "lso:WebBased",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A kind of online service provided on the library’s website.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Internetbasierte Dienstleistung"
+        },
+        {
+          "@language": "en",
+          "@value": "Web Based Service"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LibraryService"
+      }
+    },
+    {
+      "@id": "org:Site",
+      "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An office or other premise at which the organization is\n        located. Many organizations are spread across multiple sites and many sites will\n        host multiple locations. In most cases a Site will be a physical location.\n        However, we don't exclude the possibility of non-physical sites such as a\n        virtual office with an associated post box and phone reception service. \n        Extensions may provide subclasses to denote particular types of site."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/ns/org"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Site"
+      }
+    },
+    {
+      "@id": "lso:Database",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Datenbank"
+        },
+        {
+          "@language": "en",
+          "@value": "Database"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:WebBasedUsage"
+      }
+    },
+    {
+      "@id": "geo:lat",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "geo:Location"
+      },
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "lso:ResearchStation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A PC-Station provided for research within the library’s media collection.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Rechercheplatz"
+        },
+        {
+          "@language": "en",
+          "@value": "Research Station"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LocalUsage"
+      }
+    },
+    {
+      "@id": "org:hasSite",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Indicates a site at which the Organization has some presence\n    even if only indirect (e.g. virtual office or a professional service which is\n    acting as the registered address for a company). Inverse of `org:siteOf`."
+      },
+      "rdfs:domain": {
+        "@id": "org:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/ns/org"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has site"
+      },
+      "rdfs:range": {
+        "@id": "org:Site"
+      }
+    },
+    {
+      "@id": "gr:hasOpeningHoursDayOfWeek",
+      "@type": "rdf:Property",
+      "rdfs:comment": "This specifies the gr:DayOfWeek to which the gr:OpeningHoursSpecification is related...",
+      "rdfs:domain": {
+        "@id": "gr:OpeningHoursSpecification"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has opening hours day of week (1..*)"
+      },
+      "rdfs:range": {
+        "@id": "gr:DayOfWeek"
+      }
+    },
+    {
+      "@id": "vcard:hasAddress",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "To specify the components of the delivery address for the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "has address",
+      "rdfs:range": {
+        "@id": "vcard:Address"
+      }
+    },
+    {
+      "@id": "gr:DayOfWeek",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "The day of the week, used to specify to which day the opening hours of a gr:OpeningHoursSpecification refer.",
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Day of Week"
+      }
+    },
+    {
+      "@id": "lso:ExternalAccess",
+      "@type": "lso:Licence",
+      "rdfs:Label": [
+        {
+          "@language": "en",
+          "@value": "External Access for registered Users"
+        },
+        {
+          "@language": "de",
+          "@value": "Externer Zugang für angemeldete Nutzer"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      }
+    },
+    {
+      "@id": "gr:opens",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The opening hour of the gr:Location on the given gr:DayOf- Week...",
+      "rdfs:domain": {
+        "@id": "gr:OpeningHoursSpecification"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "opens (1..1)"
+      },
+      "rdfs:range": {
+        "@id": "xsd:time"
+      }
+    },
+    {
+      "@id": "dso:Presentation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A service to provide space to use the media collection on site at the library, e.g. in a reading room.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/dso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Präsenzansicht"
+        },
+        {
+          "@language": "en",
+          "@value": "Presentation"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "dso:documentService"
+        },
+        {
+          "@id": "lso:LocalUSage"
+        }
+      ]
+    },
+    {
+      "@id": "gr:hasCurrency",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The currency for all prices in the gr:PriceSpecification given using the ISO 4217 standard (3 characters).",
+      "rdfs:domain": {
+        "@id": "gr:PriceSpecification"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has currency (1..1)"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "lso:SubService",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Defines a single component of a higher-level service",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Service Component"
+        },
+        {
+          "@language": "de",
+          "@value": "Dienstleistungsbestandteil"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:LibraryService"
+      }
+    },
+    {
+      "@id": "geo:location",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "org:Site"
+      },
+      "rdfs:range": {
+        "@id": "geo:Location"
+      }
+    },
+    {
+      "@id": "lso:hasPeriodTime",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "lso:Condition"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "has Period Time"
+        },
+        {
+          "@language": "de",
+          "@value": "zugehörige Frist"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "gr:OpeningHoursSpecification",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "This is a conceptual entity that holds together all information about the opening hours on a given day (gr:DayOfWeek).",
+      "rdfs:isDefinedBy": {
+        "@id": "gr:"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Opening hours specification"
+      }
+    },
+    {
+      "@id": "lso:PayPerUse",
+      "@type": "lso:Licence",
+      "rdfs:Label": [
+        {
+          "@language": "en",
+          "@value": "Paid Offer"
+        },
+        {
+          "@language": "de",
+          "@value": "Kostenpflichtiges Angebot"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      }
+    },
+    {
+      "@id": "lso:POSBuilding",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "defines a building as a physical site where a local service is available.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "Gebäude als Servicepunkt"
+        },
+        {
+          "@language": "en",
+          "@value": "Building as Point Of Service"
+        }
+      ],
+      "rdfs:subClassOf": [
+        {
+          "@id": "org:OrganizationalUnit"
+        },
+        {
+          "@id": "lso:PointOfService"
+        }
+      ]
+    },
+    {
+      "@id": "service:providedBy",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "service:provides"
+      },
+      "rdfs:domain": {
+        "@id": "service:Service"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/service"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "providedBy"
+      },
+      "rdfs:range": {
+        "@id": "service:ServiceProvider"
+      },
+      "rdfs:seeAlso": {
+        "@id": "schema:provider"
+      }
+    },
+    {
+      "@id": "vcard:Individual",
+      "@type": "owl:Class",
+      "owl:disjointWith": [
+        {
+          "@id": "vcard:Organization"
+        },
+        {
+          "@id": "vcard:Location"
+        }
+      ],
+      "rdfs:comment": "An object representing a single person or entity",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "Individual",
+      "rdfs:subClassOf": {
+        "@id": "vcard:Kind"
+      }
+    },
+    {
+      "@id": "vcard:hasEmail",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "To specify the electronic mail address for communication with the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "has email",
+      "rdfs:range": {
+        "@id": "vcard:Email"
+      }
+    },
+    {
+      "@id": "org:Organization",
+      "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+      "owl:equivalentClass": {
+        "@id": "foaf:Organization"
+      },
+      "owl:hasKey": {
+        "@list": [
+          {
+            "@id": "org:identifier"
+          }
+        ]
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Represents a collection of people organized together into a\n        community or other social, commercial or political structure. The group has\n        some common purpose or reason for existence which goes beyond the set of\n        people belonging to it and can act as an Agent. Organizations are often \n        decomposable into hierarchical structures. It is recommended that SKOS lexical labels\n        should be used to label the Organization. In particular `skos:prefLabel` for\n        the primary (possibly legally recognized name), `skos:altLabel` for alternative\n        names (trading names, colloquial names) and `skos:notation` to denote a\n        code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/ns/org"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Organization"
+      },
+      "rdfs:subClassOf": {
+        "@id": "foaf:Agent"
+      }
+    },
+    {
+      "@id": "vcard:fn",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The formatted text corresponding to the name of the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "formatted name",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "lso:hasLicence",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "lso:WebBasedUsage"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "unter Lizenz"
+        },
+        {
+          "@language": "en",
+          "@value": "has Licence"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "lso:Licence"
+      }
+    },
+    {
+      "@id": "vcard:locality",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The locality (e.g. city or town) associated with the address of the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "locality",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "lso:OnlineInformation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "a kind of online service provided to inform the users on the web via chat or email etc.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Online Information"
+        },
+        {
+          "@language": "de",
+          "@value": "Internetbasierter Auskunftsdienst"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:WebBasedInformation"
+      }
+    },
+    {
+      "@id": "gr:Thursday",
+      "@type": "gr:DayOfWeek"
+    },
+    {
+      "@id": "lso:Recommendation",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Anschaffungsempfehlung"
+        },
+        {
+          "@language": "en",
+          "@value": "Purchase Recommendation"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:WebBasedUsage"
+      }
+    },
+    {
+      "@id": "gr:Saturday",
+      "@type": "gr:DayOfWeek"
+    },
+    {
+      "@id": "vcard:country-name",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The country name associated with the address of the object",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": "country name",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "lso:WebBasedInformation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "a kind of online service provided to inform the users on the web.",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/libso"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Web Based Information Service"
+        },
+        {
+          "@language": "de",
+          "@value": "Internetbasierter Auskunftsdienst"
+        }
+      ],
+      "rdfs:subClassOf": {
+        "@id": "lso:WebBased"
+      }
+    },
+    {
+      "@id": "org:unitOf",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Indicates an Organization of which this Unit is a part, e.g.\n    a Department within a larger FormalOrganization. This is the inverse of\n    `org:hasUnit`."
+      },
+      "rdfs:domain": {
+        "@id": "org:OrganizationalUnit"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/ns/org"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "unit Of"
+      },
+      "rdfs:range": {
+        "@id": "org:FormalOrganization"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "org:subOrganizationOf"
+      }
+    },
+    {
+      "@id": "vcard:hasValue",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Used to indicate the resource value of an object property that requires property parameters",
+      "rdfs:isDefinedBy": {
+        "@id": "http://www.w3.org/2006/vcard/ns"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "has value"
+      }
+    },
+    {
+      "@id": "dso:OpenAccess",
+      "@type": "rdfs:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://purl.org/ontology/dso"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Open Access"
+      },
+      "rdfs:subClassOf": [
+        {
+          "@id": "lso:WebBasedUsage"
+        },
+        {
+          "@id": "dso:DocumentService"
+        }
+      ]
+    },
+    {
+      "@id": "geo:long",
+      "@type": "rdfs:Property",
+      "rdfs:domain": {
+        "@id": "geo:Location"
+      },
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      }
+    }
+  ]
+}

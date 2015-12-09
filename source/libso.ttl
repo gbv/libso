@@ -1,0 +1,699 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dso: <http://purl.org/ontology/dso#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix lso: <http://purl.org/ontology/libso#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gr:DayOfWeek
+    a rdfs:Class ;
+    rdfs:comment "The day of the week, used to specify to which day the opening hours of a gr:OpeningHoursSpecification refer." ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "Day of Week"@en .
+
+gr:Friday
+    a gr:DayOfWeek .
+
+gr:Monday
+    a gr:DayOfWeek .
+
+gr:OpeningHoursSpecification
+    a rdfs:Class ;
+    rdfs:comment "This is a conceptual entity that holds together all information about the opening hours on a given day (gr:DayOfWeek)." ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "Opening hours specification"@en .
+
+gr:Saturday
+    a gr:DayOfWeek .
+
+gr:Sunday
+    a gr:DayOfWeek .
+
+gr:Thursday
+    a gr:DayOfWeek .
+
+gr:Tuesday
+    a gr:DayOfWeek .
+
+gr:UnitPriceSpecification
+    a rdfs:Class ;
+    rdfs:comment """A unit price specification is a conceptual entity that 
+        specifies the price asked for a given gr:Offering by the respective gr:Business
+        Entity. An offering may be linked to multiple unit price specifications that
+        specify alternative prices for non-overlapping sets of conditions (e.g. 
+        quantities or sales regions) or with differing validity periods...""" ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "Unit price specification"@en .
+
+gr:Wednesday
+    a gr:DayOfWeek .
+
+gr:closes
+    a rdf:Property ;
+    rdfs:comment "The closing hour of the gr:Location on the given gr:DayOfWeek..." ;
+    rdfs:domain gr:OpeningHoursSpecification ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "closes (1..1)"@en ;
+    rdfs:range xsd:time .
+
+gr:hasCurrency
+    a rdf:Property ;
+    rdfs:comment "The currency for all prices in the gr:PriceSpecification given using the ISO 4217 standard (3 characters)." ;
+    rdfs:domain gr:PriceSpecification ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "has currency (1..1)"@en ;
+    rdfs:range xsd:string .
+
+gr:hasCurrencyValue
+    a rdf:Property ;
+    rdfs:comment """This property specifies the amount of money for a price per
+    unit, shipping charges, or payment charges. The currency and other relevant
+    details are attached to the respective gr:PriceSpecification etc...""" ;
+    rdfs:domain gr:PriceSpecification ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "has currency value (0..1)"@en ;
+    rdfs:range xsd:float .
+
+gr:hasOpeningHoursDayOfWeek
+    a rdf:Property ;
+    rdfs:comment "This specifies the gr:DayOfWeek to which the gr:OpeningHoursSpecification is related..." ;
+    rdfs:domain gr:OpeningHoursSpecification ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "has opening hours day of week (1..*)"@en ;
+    rdfs:range gr:DayOfWeek .
+
+gr:hasOpeningHoursSpecification
+    a rdf:Property ;
+    rdfs:comment "For use in LSO: This property links a lso:Local to a gr:OpeningHoursSpecification.", "This property links a gr:Location to a gr:OpeningHoursSpecification." ;
+    rdfs:domain gr:Location, lso:Local, schema:Place ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "has opening hours specification (0..*)"@en ;
+    rdfs:range gr:OpeingHoursSpecification .
+
+gr:hasPriceSpecification
+    a rdf:Property ;
+    rdfs:comment "For use in LSO: This property links a lso:LibraryService to a gr:PriceSpecification.", "This links a gr:Offering to a gr:PriceSpecification or specifications..." ;
+    rdfs:domain gr:Offering, lso:LibraryService, schema:Offer ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "has price specification (0..*)"@en ;
+    rdfs:range gr:PriceSpecification .
+
+gr:opens
+    a rdf:Property ;
+    rdfs:comment "The opening hour of the gr:Location on the given gr:DayOf- Week..." ;
+    rdfs:domain gr:OpeningHoursSpecification ;
+    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+    rdfs:label "opens (1..1)"@en ;
+    rdfs:range xsd:time .
+
+dso:Digitization
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
+    rdfs:label "Scanner"@en ;
+    rdfs:subClassOf lso:CopierOrScanner .
+
+dso:InterLoan
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
+    rdfs:label "Fernleihe"@de, "Interloan"@en ;
+    rdfs:subClassOf dso:DocumentService, lso:LocalUsage .
+
+dso:OpenAccess
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
+    rdfs:label "Open Access"@en ;
+    rdfs:subClassOf dso:DocumentService, lso:WebBasedUsage .
+
+dso:Presentation
+    a rdfs:Class ;
+    rdfs:comment "A service to provide space to use the media collection on site at the library, e.g. in a reading room." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
+    rdfs:label "Presentation"@en, "Präsenzansicht"@de ;
+    rdfs:subClassOf dso:documentService, lso:LocalUSage .
+
+dso:loan
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/dso> ;
+    rdfs:label "Fernleihe"@de, "Interloan"@en ;
+    rdfs:subClassOf dso:DocumentService, lso:LocalUsage .
+
+<http://purl.org/ontology/libso>
+    dct:creator "Matthias Letsch" ;
+    dct:description "An Ontology to define a classification of conventional services provided by libraries." ;
+    dct:modified "2014-02-12"^^xsd:date ;
+    dct:title "Library Service Ontology"@en ;
+    vann:preferredNamespacePrefix "lso" ;
+    vann:preferredNamespaceUri "http://purl.org/ontology/libso#" ;
+    a voaf:Vocabulary, owl:Ontology ;
+    owl:versionInfo "0.1.1" .
+
+lso:Catalogue
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Catalogue"@en, "Katalog"@de ;
+    rdfs:subClassOf lso:WebBasedUsage .
+
+lso:Condition
+    a rdfs:Class ;
+    rdfs:comment "Defines the terms of use for a service." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Condition"@en, "Nutzungskondition"@de ;
+    owl:sameAs service:ServiceLimitation .
+
+lso:CopierBlack
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Black and White Copier"@en, "Schwarz-Weiß-Kopierer"@de ;
+    rdfs:subClassOf lso:CopierOrScanner .
+
+lso:CopierColor
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Color Copier"@en, "Farbkopierer"@de ;
+    rdfs:subClassOf lso:CopierOrScanner .
+
+lso:CopierOrScanner
+    a rdfs:Class ;
+    rdfs:comment "A service provided to enable users making personal copies or scans of documents." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Copier or Scanner"@en, "Kopierer oder Scanner"@de ;
+    rdfs:subClassOf lso:LocalWork .
+
+lso:Database
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Database"@en, "Datenbank"@de ;
+    rdfs:subClassOf lso:WebBasedUsage .
+
+lso:ExternalAccess
+    a lso:Licence ;
+    rdfs:Label "External Access for registered Users"@en, "Externer Zugang für angemeldete Nutzer"@de ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> .
+
+lso:Free
+    a lso:Licence ;
+    rdfs:Label "Free Online Access"@en, "Frei im Web verfügbar"@de ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> .
+
+lso:GroupWorkSpace
+    a rdfs:Class ;
+    rdfs:comment "A service to provide working space for groups of users." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Group Work Room"@en, "Gruppenarbeitsraum"@de ;
+    rdfs:subClassOf lso:LocalWork .
+
+lso:IndividualWorkSpace
+    a rdfs:Class ;
+    rdfs:comment "A service to provide the opportunity for individual work for a single user." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Einzelarbeitsplatz"@de, "Individual Work Space"@en ;
+    rdfs:subClassOf lso:LocalWork .
+
+lso:InformationCounter
+    a rdfs:Class ;
+    rdfs:comment "A service provided to inform the library users at a service counter." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Information Counter"@en, "Informationstheke"@de ;
+    rdfs:subClassOf lso:LocalInformation .
+
+lso:LibraryService
+    a rdfs:Class ;
+    rdfs:comment "A kind of service provided by a library or a related Institution." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Bibliotheksdienstleistung"@de, "Library Service"@en ;
+    rdfs:subClassOf service:Service .
+
+lso:LibraryTour
+    a rdfs:Class ;
+    rdfs:comment "A service provided to guide the users through the library building and to show them the potential uses." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Bibliotheksführung"@de, "Library Tour"@en ;
+    rdfs:subClassOf lso:LocalInformation .
+
+lso:Licence
+    a rdfs:Class ;
+    rdfs:comment "class defines conditions for access to databases given by licenses." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Licence"@en, "Lizenz"@de ;
+    rdfs:subClassOf lso:Condition .
+
+lso:Local
+    a rdfs:Class ;
+    rdfs:comment "A kind of service that is offered on site at the library." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Local Service"@en, "Lokale Dienstleistung"@de ;
+    rdfs:subClassOf lso:LibraryService .
+
+lso:LocalInformation
+    a rdfs:Class ;
+    rdfs:comment "A kind of service provided to inform the library users on site in the library." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Local Information Service"@en, "Lokale Informationsvermittlung"@de ;
+    rdfs:subClassOf lso:Local .
+
+lso:LocalUsage
+    a rdfs:Class ;
+    rdfs:comment "A kind of service provided to take use of the library’s media collection." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Local Usage Service"@en, "Lokale Bestandsbenutzung"@de ;
+    rdfs:subClassOf lso:Local ;
+    owl:sameAs dso:documentService .
+
+lso:LocalWork
+    a rdfs:Class ;
+    rdfs:comment "A service for providing working space and opportunities to the users." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Local Work"@en, "Lokales Arbeiten"@de ;
+    rdfs:subClassOf lso:Local .
+
+lso:NationalLicence
+    a lso:Licence ;
+    rdfs:Label "National Licence"@en, "Nationallizenz"@de ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> .
+
+lso:OnlineInformation
+    a rdfs:Class ;
+    rdfs:comment "a kind of online service provided to inform the users on the web via chat or email etc." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Internetbasierter Auskunftsdienst"@de, "Online Information"@en ;
+    rdfs:subClassOf lso:WebBasedInformation .
+
+lso:PCWorkStation
+    a rdfs:Class ;
+    rdfs:comment "A service to provide the opportunity to do work on a PC." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "PC Work Station"@en, "PC-Arbeitsplatz"@de ;
+    rdfs:subClassOf lso:LocalWork .
+
+lso:POSBuilding
+    a rdfs:Class ;
+    rdfs:comment "defines a building as a physical site where a local service is available." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Building as Point Of Service"@en, "Gebäude als Servicepunkt"@de ;
+    rdfs:subClassOf lso:PointOfService, org:OrganizationalUnit .
+
+lso:POSDepartment
+    a rdfs:Class ;
+    rdfs:comment "defines a department as a physical site where a local service is available." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Abteilung als Servicepunkt"@de, "Department as Point Of Service"@en ;
+    rdfs:subClassOf lso:PointOfService, org:OrganizationalUnit .
+
+lso:POSUnit
+    a rdfs:Class ;
+    rdfs:comment "defines an organizational unit as a physical site where a local service is available." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Organizational Unit as Point Of Service"@en, "Teilorganisation als Servicepunkt"@de ;
+    rdfs:subClassOf lso:PointOfService, org:OrganizationalUnit .
+
+lso:PayPerUse
+    a lso:Licence ;
+    rdfs:Label "Kostenpflichtiges Angebot"@de, "Paid Offer"@en ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> .
+
+lso:PhotoService
+    a rdfs:Class ;
+    rdfs:comment "a service provided to generate photographs for the users." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Fotodienst"@de, "Photo Service"@en ;
+    rdfs:subClassOf lso:LocalWork .
+
+lso:PointOfService
+    a rdfs:Class ;
+    rdfs:comment "defines a physical site where a local service is available." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Point of Service"@en, "Servicepunkt"@de ;
+    rdfs:subClassOf org:OrganizationalUnit .
+
+lso:Recommendation
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Anschaffungsempfehlung"@en, "Purchase Recommendation"@en ;
+    rdfs:subClassOf lso:WebBasedUsage .
+
+lso:Registration
+    a rdfs:Class ;
+    rdfs:comment "An action to register a person as a library user and inform it about usage opportunities and conditions." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Nutzeranmeldung"@de, "User Registration"@en ;
+    rdfs:subClassOf lso:LocalInformation .
+
+lso:ResearchStation
+    a rdfs:Class ;
+    rdfs:comment "A PC-Station provided for research within the library’s media collection." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Rechercheplatz"@de, "Research Station"@en ;
+    rdfs:subClassOf lso:LocalUsage .
+
+lso:SingleUser
+    a lso:Licence ;
+    rdfs:Label "Einzelplatzversion"@de, "Sinlge User Version"@en ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> .
+
+lso:SubService
+    a rdfs:Class ;
+    rdfs:comment "Defines a single component of a higher-level service" ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Dienstleistungsbestandteil"@de, "Service Component"@en ;
+    rdfs:subClassOf lso:LibraryService .
+
+lso:UserTraining
+    a rdfs:Class ;
+    rdfs:comment "A service provided to train the users in research and use of the library’s media collection." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Nutzerschulung"@de, "User Training"@en ;
+    rdfs:subClassOf lso:LocalInformation .
+
+lso:WebBased
+    a rdfs:Class ;
+    rdfs:comment "A kind of online service provided on the library’s website." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Internetbasierte Dienstleistung"@de, "Web Based Service"@en ;
+    rdfs:subClassOf lso:LibraryService .
+
+lso:WebBasedInformation
+    a rdfs:Class ;
+    rdfs:comment "a kind of online service provided to inform the users on the web." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Internetbasierter Auskunftsdienst"@de, "Web Based Information Service"@en ;
+    rdfs:subClassOf lso:WebBased .
+
+lso:WebBasedUsage
+    a rdfs:Class ;
+    rdfs:comment "A kind of online service provided to gain access to parts of the media collection on the web." ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Internetbasierte Bestandsbenutzung"@de, "Web Based Usage Service"@en ;
+    rdfs:subClassOf lso:WebBased .
+
+lso:floor
+    a rdfs:Property ;
+    rdfs:domain lso:POSDepartment ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Etage oder Ebene"@de, "floor"@en ;
+    rdfs:range rdfs:Literal .
+
+lso:hasAccessURL
+    a rdf:Property ;
+    rdfs:domain lso:WebBased ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Zugang über URL"@de, "has access URL"@en ;
+    rdfs:range rdfs:Literal .
+
+lso:hasCondition
+    a rdf:Property ;
+    rdfs:domain lso:LibraryService ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Nutzungskonditionen"@de, "has condition"@en ;
+    rdfs:range lso:Condition .
+
+lso:hasLicence
+    a rdfs:Property ;
+    rdfs:domain lso:WebBasedUsage ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "has Licence"@en, "unter Lizenz"@de ;
+    rdfs:range lso:Licence .
+
+lso:hasOptionalWebAccess
+    a rdf:Property ;
+    rdfs:domain lso:Local ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Alternativer Internetzugang"@de, "has optional web access"@en ;
+    rdfs:range lso:WebBased .
+
+lso:hasPeriodTime
+    a rdfs:Property ;
+    rdfs:domain lso:Condition ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "has Period Time"@en, "zugehörige Frist"@de ;
+    rdfs:range rdfs:Literal .
+
+lso:hasPointOfService
+    a rdf:Property ;
+    rdfs:domain lso:Local ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "has point of service"@en, "verfügbar am Standort"@de ;
+    rdfs:range lso:PointOfService .
+
+lso:relatedDocument
+    a rdfs:Property ;
+    rdfs:domain rdfs:Condition ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Zugehöriges Dokument"@de, "related Document"@en ;
+    rdfs:range rdfs:Literal .
+
+lso:room
+    a rdfs:Property ;
+    rdfs:domain lso:POSDepartment ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Zimmernummer"@de, "room number"@en ;
+    rdfs:range rdfs:Literal .
+
+lso:staffContact
+    a rdfs:Property ;
+    rdfs:domain lso:LibraryService ;
+    rdfs:isDefinedBy <http://purl.org/ontology/libso> ;
+    rdfs:label "Kontakt zum Personal"@de, "staff Contact"@en ;
+    rdfs:range vcard:Individual, vcard:Organization .
+
+service:Service
+    a owl:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/service> ;
+    rdfs:label "Service"@en ;
+    rdfs:seeAlso schema:Product, schema:Service ;
+    rdfs:subClassOf dct:Service, gr:ProductOrService .
+
+service:ServiceProvider
+    a rdfs:Class ;
+    rdfs:isDefinedBy <http://purl.org/ontology/service> ;
+    rdfs:label "ServiceProvider"@en ;
+    rdfs:seeAlso dct:agent, gr:BusinessEntity, schema:Organization, schema:person, foaf:agent .
+
+service:providedBy
+    a owl:ObjectProperty ;
+    rdfs:domain service:Service ;
+    rdfs:isDefinedBy <http://purl.org/ontology/service> ;
+    rdfs:label "providedBy"@en ;
+    rdfs:range service:ServiceProvider ;
+    rdfs:seeAlso schema:provider ;
+    owl:inverseOf service:provides .
+
+service:provides
+    a owl:ObjectProperty ;
+    rdfs:domain service:ServiceProvider ;
+    rdfs:isDefinedBy <http://purl.org/ontology/service> ;
+    rdfs:label "provides"@en ;
+    rdfs:range service:Service ;
+    owl:inverseOf service:providedBy .
+
+geo:Location
+    a rdfs:Class .
+
+geo:lat
+    a rdfs:Property ;
+    rdfs:domain geo:Location ;
+    rdfs:range rdfs:Literal .
+
+geo:location
+    a rdfs:Property ;
+    rdfs:domain org:Site ;
+    rdfs:range geo:Location .
+
+geo:long
+    a rdfs:Property ;
+    rdfs:domain geo:Location ;
+    rdfs:range rdfs:Literal .
+
+vcard:Address
+    a owl:Class ;
+    rdfs:comment "To specify the components of the delivery address for the object"^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "Address"^^xsd:string .
+
+vcard:Email
+    a owl:Class ;
+    rdfs:comment """To specify the electronic mail address for communication
+        with the object the vCard represents. Use the hasEmail object property."""^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "Email"^^xsd:string ;
+    owl:deprecated true .
+
+vcard:Fax
+    a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "Fax"^^xsd:string ;
+    rdfs:subClassOf vcard:TelephoneType .
+
+vcard:Individual
+    a owl:Class ;
+    rdfs:comment "An object representing a single person or entity"^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "Individual"^^xsd:string ;
+    rdfs:subClassOf vcard:Kind ;
+    owl:disjointWith vcard:Location, vcard:Organization .
+
+vcard:Organization
+    a owl:Class ;
+    rdfs:comment """An object representing an organization. An organization
+        is a single entity, and might represent a business or government, a department
+        or division within a business or government, a club, an association, or the
+        like."""^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "Organization"^^xsd:string ;
+    rdfs:subClassOf vcard:Kind .
+
+vcard:Voice
+    a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "Voice"^^xsd:string ;
+    rdfs:subClassOf vcard:TelephoneType .
+
+vcard:country-name
+    a owl:DatatypeProperty ;
+    rdfs:comment "The country name associated with the address of the object" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "country name"^^xsd:string ;
+    rdfs:range xsd:string .
+
+vcard:fn
+    a owl:DatatypeProperty ;
+    rdfs:comment "The formatted text corresponding to the name of the object" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "formatted name"^^xsd:string ;
+    rdfs:range xsd:string .
+
+vcard:hasAddress
+    a owl:ObjectProperty ;
+    rdfs:comment "To specify the components of the delivery address for the object"^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "has address"^^xsd:string ;
+    rdfs:range vcard:Address .
+
+vcard:hasEmail
+    a owl:ObjectProperty ;
+    rdfs:comment "To specify the electronic mail address for communication with the object"^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "has email"^^xsd:string ;
+    rdfs:range vcard:Email .
+
+vcard:hasTelephone
+    a owl:ObjectProperty ;
+    rdfs:comment "To specify the telephone number for telephony communication with the object"^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "has telephone"^^xsd:string ;
+    owl:equivalentProperty vcard:tel .
+
+vcard:hasValue
+    a owl:ObjectProperty ;
+    rdfs:comment "Used to indicate the resource value of an object property that requires property parameters"^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "has value"@en .
+
+vcard:locality
+    a owl:DatatypeProperty ;
+    rdfs:comment "The locality (e.g. city or town) associated with the address of the object" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "locality"^^xsd:string ;
+    rdfs:range xsd:string .
+
+vcard:organization-name
+    a owl:DatatypeProperty ;
+    rdfs:comment "To specify the organizational name associated with the object" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "organization name"^^xsd:string ;
+    rdfs:range xsd:string .
+
+vcard:postal-code
+    a owl:DatatypeProperty ;
+    rdfs:comment "The postal code associated with the address of the object" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "postal code"^^xsd:string ;
+    rdfs:range xsd:string .
+
+vcard:street-address
+    a owl:DatatypeProperty ;
+    rdfs:comment "The street address associated with the address of the object" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+    rdfs:label "street address"^^xsd:string ;
+    rdfs:range xsd:string .
+
+org:Organization
+    a rdfs:Class, owl:Class ;
+    rdfs:comment """Represents a collection of people organized together into a
+        community or other social, commercial or political structure. The group has
+        some common purpose or reason for existence which goes beyond the set of
+        people belonging to it and can act as an Agent. Organizations are often 
+        decomposable into hierarchical structures. It is recommended that SKOS lexical labels
+        should be used to label the Organization. In particular `skos:prefLabel` for
+        the primary (possibly legally recognized name), `skos:altLabel` for alternative
+        names (trading names, colloquial names) and `skos:notation` to denote a
+        code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"""@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:label "Organization"@en ;
+    rdfs:subClassOf foaf:Agent ;
+    owl:equivalentClass foaf:Organization ;
+    owl:hasKey (org:identifier
+    ) .
+
+org:OrganizationalUnit
+    a rdfs:Class, owl:Class ;
+    rdfs:comment """An Organization such as a University Support Unit which is
+        part of some larger FormalOrganization and only has full recognition within
+        the context of that FormalOrganization, it is not a Legal Entity in its own
+        right. Units can be large and complex containing other Units and even
+        FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"""@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:label "OrganizationalUnit"@en ;
+    rdfs:subClassOf org:Organization .
+
+org:Site
+    a rdfs:Class, owl:Class ;
+    rdfs:comment """An office or other premise at which the organization is
+        located. Many organizations are spread across multiple sites and many sites will
+        host multiple locations. In most cases a Site will be a physical location.
+        However, we don't exclude the possibility of non-physical sites such as a
+        virtual office with an associated post box and phone reception service. 
+        Extensions may provide subclasses to denote particular types of site."""@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:label "Site"@en .
+
+org:hasSite
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """Indicates a site at which the Organization has some presence
+    even if only indirect (e.g. virtual office or a professional service which is
+    acting as the registered address for a company). Inverse of `org:siteOf`."""@en ;
+    rdfs:domain org:Organization ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:label "has site"@en ;
+    rdfs:range org:Site .
+
+org:hasUnit
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """Indicates a unit which is part of this Organization, e.g. a
+        Department within a larger FormalOrganization. Inverse of `org:unitOf`."""@en ;
+    rdfs:domain org:FormalOrganization ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:label "has Unit"@en ;
+    rdfs:range org:OrganizationalUnit ;
+    rdfs:subPropertyOf org:hasSubOrganization .
+
+org:unitOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """Indicates an Organization of which this Unit is a part, e.g.
+    a Department within a larger FormalOrganization. This is the inverse of
+    `org:hasUnit`."""@en ;
+    rdfs:domain org:OrganizationalUnit ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:label "unit Of"@en ;
+    rdfs:range org:FormalOrganization ;
+    rdfs:subPropertyOf org:subOrganizationOf .
+
