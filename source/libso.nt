@@ -1,0 +1,530 @@
+<http://purl.org/ontology/libso> <http://purl.org/dc/terms/creator> "Matthias Letsch" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/libso#Free> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/libso#Licence> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/libso#UserTraining> <http://www.w3.org/2000/01/rdf-schema#label> "User Training"@en .
+<http://purl.org/goodrelations/v1#Saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://purl.org/ontology/libso#SingleUser> <http://www.w3.org/2000/01/rdf-schema#Label> "Einzelplatzversion"@de .
+<http://purl.org/ontology/libso#POSUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Teilorganisation als Servicepunkt"@de .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#Location> .
+<http://purl.org/ontology/libso#staffContact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#LibraryService> .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#label> "unit Of"@en .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#ExternalAccess> <http://www.w3.org/2000/01/rdf-schema#Label> "Externer Zugang f\u00FCr angemeldete Nutzer"@de .
+<http://purl.org/ontology/libso#OnlineInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Internetbasierter Auskunftsdienst"@de .
+<http://purl.org/ontology/libso#WebBasedInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#WebBased> .
+<http://purl.org/ontology/libso#InformationCounter> <http://www.w3.org/2000/01/rdf-schema#comment> "A service provided to inform the library users at a service counter." .
+<http://purl.org/ontology/libso#hasOptionalWebAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#Local> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+<http://purl.org/ontology/libso#IndividualWorkSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#hasAccessURL> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#WebBased> .
+<http://purl.org/ontology/libso#Registration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#LocalWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#hasPointOfService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#Local> .
+<http://purl.org/ontology/service#providedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/service> .
+<http://purl.org/ontology/libso#staffContact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Individual> .
+<http://purl.org/ontology/dso#OpenAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#WebBasedUsage> .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schema.org/person> .
+<http://purl.org/ontology/libso#WebBasedInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Web Based Information Service"@en .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#LibraryService> .
+<http://purl.org/ontology/service#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+<http://purl.org/ontology/libso#LocalUsage> <http://www.w3.org/2000/01/rdf-schema#label> "Local Usage Service"@en .
+<http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://purl.org/ontology/libso#WebBasedUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#WebBased> .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://purl.org/ontology/libso#PointOfService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a site at which the Organization has some presence\n    even if only indirect (e.g. virtual office or a professional service which is\n    acting as the registered address for a company). Inverse of `org:siteOf`."@en .
+<http://purl.org/ontology/service#providedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schema.org/provider> .
+<http://purl.org/goodrelations/v1#Monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://purl.org/ontology/service#provides> <http://www.w3.org/2000/01/rdf-schema#label> "provides"@en .
+<http://purl.org/ontology/libso#hasLicence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/libso#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Purchase Recommendation"@en .
+<http://purl.org/ontology/libso#NationalLicence> <http://www.w3.org/2000/01/rdf-schema#Label> "Nationallizenz"@de .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "has currency value (0..1)"@en .
+<http://purl.org/ontology/libso#Catalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Opening hours specification"@en .
+<http://purl.org/ontology/libso#PayPerUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/libso#Licence> .
+<http://purl.org/ontology/libso#POSDepartment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/service#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/dso#Presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "An office or other premise at which the organization is\n        located. Many organizations are spread across multiple sites and many sites will\n        host multiple locations. In most cases a Site will be a physical location.\n        However, we don't exclude the possibility of non-physical sites such as a\n        virtual office with an associated post box and phone reception service. \n        Extensions may provide subclasses to denote particular types of site."@en .
+<http://purl.org/ontology/libso#CopierBlack> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso> <http://purl.org/dc/terms/description> "An Ontology to define a classification of conventional services provided by libraries." .
+<http://purl.org/ontology/libso#PayPerUse> <http://www.w3.org/2000/01/rdf-schema#Label> "Kostenpflichtiges Angebot"@de .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#Local> .
+<http://purl.org/ontology/dso#OpenAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/dso#DocumentService> .
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> .
+<http://purl.org/ontology/libso#LocalWork> <http://www.w3.org/2000/01/rdf-schema#label> "Lokales Arbeiten"@de .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#hasPeriodTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/libso#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#POSDepartment> <http://www.w3.org/2000/01/rdf-schema#comment> "defines a department as a physical site where a local service is available." .
+<http://purl.org/goodrelations/v1#Sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://purl.org/ontology/libso#floor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#WebBased> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2006/vcard/ns#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/goodrelations/v1#Tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2000/01/rdf-schema#label> "Email"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/dso#Presentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalUSage> .
+<http://purl.org/ontology/dso#loan> <http://www.w3.org/2000/01/rdf-schema#label> "Fernleihe"@de .
+<http://purl.org/ontology/libso#staffContact> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#PhotoService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/service#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#ProductOrService> .
+<http://purl.org/ontology/libso#Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Nutzungskondition"@de .
+<http://purl.org/ontology/libso> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<http://purl.org/ontology/libso#PhotoService> <http://www.w3.org/2000/01/rdf-schema#label> "Fotodienst"@de .
+<http://purl.org/ontology/libso#floor> <http://www.w3.org/2000/01/rdf-schema#label> "Etage oder Ebene"@de .
+<http://purl.org/ontology/libso#hasCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/libso#Condition> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://purl.org/ontology/libso#relatedDocument> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Condition> .
+<http://purl.org/ontology/libso#CopierColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#WebBasedInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Internetbasierter Auskunftsdienst"@de .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#comment> "The closing hour of the gr:Location on the given gr:DayOfWeek..." .
+<http://www.w3.org/2006/vcard/ns#locality> <http://www.w3.org/2000/01/rdf-schema#label> "locality"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#room> <http://www.w3.org/2000/01/rdf-schema#label> "room number"@en .
+<http://www.w3.org/2006/vcard/ns#hasTelephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has price specification (0..*)"@en .
+<http://purl.org/ontology/libso#hasCondition> <http://www.w3.org/2000/01/rdf-schema#label> "has condition"@en .
+<http://purl.org/ontology/libso#POSUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "defines an organizational unit as a physical site where a local service is available." .
+<http://purl.org/ontology/libso#ResearchStation> <http://www.w3.org/2000/01/rdf-schema#label> "Rechercheplatz"@de .
+<http://www.w3.org/2006/vcard/ns#organization-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/libso#Catalogue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/2006/vcard/ns#hasAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/libso#InformationCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Information Counter"@en .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://purl.org/ontology/libso#Local> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/dso#InterLoan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dso> .
+<http://purl.org/ontology/libso#Catalogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#WebBasedUsage> .
+<http://www.w3.org/2006/vcard/ns#locality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#PointOfService> <http://www.w3.org/2000/01/rdf-schema#comment> "defines a physical site where a local service is available." .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso> <http://purl.org/vocab/vann/preferredNamespacePrefix> "lso" .
+<http://purl.org/ontology/libso#CopierBlack> <http://www.w3.org/2000/01/rdf-schema#label> "Black and White Copier"@en .
+<http://purl.org/ontology/libso#Catalogue> <http://www.w3.org/2000/01/rdf-schema#label> "Katalog"@de .
+<http://purl.org/ontology/libso#GroupWorkSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalWork> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/libso#OnlineInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/goodrelations/v1#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "Day of Week"@en .
+<http://purl.org/ontology/libso#WebBasedInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "a kind of online service provided to inform the users on the web." .
+<http://purl.org/ontology/libso#WebBasedUsage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#ExternalAccess> <http://www.w3.org/2000/01/rdf-schema#Label> "External Access for registered Users"@en .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#hasCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#ResearchStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalUsage> .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schema.org/Organization> .
+<http://purl.org/ontology/libso#hasLicence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#floor> <http://www.w3.org/2000/01/rdf-schema#label> "floor"@en .
+<http://www.w3.org/2006/vcard/ns#Voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/libso#CopierColor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/goodrelations/v1#opens> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://purl.org/ontology/libso#Database> <http://www.w3.org/2000/01/rdf-schema#label> "Datenbank"@de .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#FormalOrganization> .
+<http://purl.org/ontology/libso#LocalWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A service for providing working space and opportunities to the users." .
+<http://purl.org/ontology/libso#LocalInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/2006/vcard/ns#organization-name> <http://www.w3.org/2000/01/rdf-schema#label> "organization name"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2006/vcard/ns#organization-name> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the organizational name associated with the object" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Site> .
+<http://purl.org/ontology/libso#Database> <http://www.w3.org/2000/01/rdf-schema#label> "Database"@en .
+<http://purl.org/ontology/dso#loan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#LocalWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#Local> .
+<http://purl.org/ontology/libso#IndividualWorkSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A service to provide the opportunity for individual work for a single user." .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/vcard/ns#hasTelephone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://purl.org/ontology/libso#OnlineInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "a kind of online service provided to inform the users on the web via chat or email etc." .
+<http://purl.org/ontology/libso#WebBased> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/service#providedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/service#ServiceProvider> .
+<http://purl.org/ontology/libso#SubService> <http://www.w3.org/2000/01/rdf-schema#label> "Service Component"@en .
+<http://purl.org/ontology/libso#LocalWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#InformationCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization such as a University Support Unit which is\n        part of some larger FormalOrganization and only has full recognition within\n        the context of that FormalOrganization, it is not a Legal Entity in its own\n        right. Units can be large and complex containing other Units and even\n        FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"@en .
+<http://purl.org/ontology/libso#PCWorkStation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/ontology/libso#CopierColor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#CopierOrScanner> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/service#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/Service> .
+<http://purl.org/ontology/libso#hasLicence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#WebBasedUsage> .
+<http://purl.org/ontology/libso#PointOfService> <http://www.w3.org/2000/01/rdf-schema#label> "Point of Service"@en .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Offer> .
+<http://purl.org/ontology/libso#ExternalAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/libso#Licence> .
+<http://purl.org/ontology/libso#hasPeriodTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://www.w3.org/2006/vcard/ns#locality> <http://www.w3.org/2000/01/rdf-schema#comment> "The locality (e.g. city or town) associated with the address of the object" .
+<http://www.w3.org/2006/vcard/ns#hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/ontology/dso#Digitization> <http://www.w3.org/2000/01/rdf-schema#label> "Scanner"@en .
+<http://purl.org/ontology/libso#hasPointOfService> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/libso#PointOfService> .
+<http://purl.org/ontology/libso#LocalUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#Offering> .
+<http://purl.org/ontology/libso#PCWorkStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<http://purl.org/ontology/libso#hasAccessURL> <http://www.w3.org/2000/01/rdf-schema#label> "Zugang \u00FCber URL"@de .
+<http://purl.org/ontology/libso#PCWorkStation> <http://www.w3.org/2000/01/rdf-schema#comment> "A service to provide the opportunity to do work on a PC." .
+<http://purl.org/ontology/libso#PCWorkStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalWork> .
+<http://purl.org/ontology/service#providedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/service#provides> .
+<http://www.w3.org/2006/vcard/ns#hasAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Address> .
+<http://purl.org/ontology/libso#LibraryService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#Licence> <http://www.w3.org/2000/01/rdf-schema#comment> "class defines conditions for access to databases given by licenses." .
+<http://purl.org/ontology/libso#Registration> <http://www.w3.org/2000/01/rdf-schema#comment> "An action to register a person as a library user and inform it about usage opportunities and conditions." .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2006/vcard/ns#hasTelephone> <http://www.w3.org/2000/01/rdf-schema#label> "has telephone"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#LocalUsage> <http://www.w3.org/2000/01/rdf-schema#label> "Lokale Bestandsbenutzung"@de .
+<http://purl.org/ontology/libso#LibraryService> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliotheksdienstleistung"@de .
+<http://purl.org/ontology/libso#Condition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/libso> <http://purl.org/dc/terms/title> "Library Service Ontology"@en .
+<http://purl.org/ontology/dso#OpenAccess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dso> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#label> "country name"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#LocalInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#Local> .
+<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/service> .
+<http://purl.org/ontology/libso#PointOfService> <http://www.w3.org/2000/01/rdf-schema#label> "Servicepunkt"@de .
+<http://purl.org/ontology/libso#floor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#POSDepartment> .
+<http://purl.org/ontology/libso#hasPointOfService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#PayPerUse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2006/vcard/ns#Location> .
+<http://purl.org/ontology/libso#CopierColor> <http://www.w3.org/2000/01/rdf-schema#label> "Farbkopierer"@de .
+<http://purl.org/ontology/dso#OpenAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#Registration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalInformation> .
+<http://purl.org/ontology/libso#POSBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "Building as Point Of Service"@en .
+<http://purl.org/ontology/libso#OnlineInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#WebBasedUsage> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of online service provided to gain access to parts of the media collection on the web." .
+<http://purl.org/ontology/libso#ResearchStation> <http://www.w3.org/2000/01/rdf-schema#comment> "A PC-Station provided for research within the library\u2019s media collection." .
+<http://www.w3.org/2006/vcard/ns#Fax> <http://www.w3.org/2000/01/rdf-schema#label> "Fax"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#hasAccessURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#label> "closes (1..1)"@en .
+<http://purl.org/ontology/libso#Database> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#UserTraining> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/goodrelations/v1#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Anschaffungsempfehlung"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#UserTraining> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#SubService> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a single component of a higher-level service" .
+<http://purl.org/ontology/service#provides> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/service#ServiceProvider> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://purl.org/ontology/libso#POSUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#hasPointOfService> <http://www.w3.org/2000/01/rdf-schema#label> "verf\u00FCgbar am Standort"@de .
+<http://purl.org/ontology/libso#CopierColor> <http://www.w3.org/2000/01/rdf-schema#label> "Color Copier"@en .
+<http://purl.org/ontology/libso#Recommendation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Unit"@en .
+<http://purl.org/ontology/libso#Local> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#comment> "The postal code associated with the address of the object" .
+<http://purl.org/ontology/libso#CopierOrScanner> <http://www.w3.org/2000/01/rdf-schema#label> "Copier or Scanner"@en .
+<http://purl.org/ontology/libso> <http://purl.org/dc/terms/modified> "2014-02-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/ontology/libso#relatedDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Zugeh\u00F6riges Dokument"@de .
+<http://purl.org/ontology/libso#hasOptionalWebAccess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#hasLicence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/libso#Licence> .
+<http://purl.org/ontology/libso#Licence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#POSBuilding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#LibraryTour> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliotheksf\u00FChrung"@de .
+<http://purl.org/goodrelations/v1#Thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://purl.org/ontology/libso#Local> <http://www.w3.org/2000/01/rdf-schema#label> "Lokale Dienstleistung"@de .
+<http://purl.org/ontology/libso#Free> <http://www.w3.org/2000/01/rdf-schema#Label> "Frei im Web verf\u00FCgbar"@de .
+<http://purl.org/ontology/libso#SubService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LibraryService> .
+<http://purl.org/ontology/libso#hasCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Nutzungskonditionen"@de .
+<http://purl.org/ontology/libso#CopierBlack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#CopierOrScanner> .
+<http://purl.org/goodrelations/v1#opens> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
+<http://purl.org/ontology/libso#relatedDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/ontology/libso#ResearchStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#hasCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#LibraryService> .
+<http://purl.org/ontology/libso#LibraryTour> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#SingleUser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/dso#InterLoan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/dso#DocumentService> .
+<http://purl.org/ontology/libso#LibraryTour> <http://www.w3.org/2000/01/rdf-schema#label> "Library Tour"@en .
+<http://purl.org/ontology/libso#Licence> <http://www.w3.org/2000/01/rdf-schema#label> "Lizenz"@de .
+<http://purl.org/ontology/dso#Digitization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dso> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a gr:Location to a gr:OpeningHoursSpecification." .
+<http://purl.org/ontology/libso#POSDepartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://purl.org/ontology/libso#floor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/libso#InformationCounter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#LocalUsage> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/ontology/dso#documentService> .
+<http://purl.org/goodrelations/v1#opens> <http://www.w3.org/2000/01/rdf-schema#label> "opens (1..1)"@en .
+<http://purl.org/ontology/libso#UserTraining> <http://www.w3.org/2000/01/rdf-schema#label> "Nutzerschulung"@de .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An object representing an organization. An organization\n        is a single entity, and might represent a business or government, a department\n        or division within a business or government, a club, an association, or the\n        like."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/dso#InterLoan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#hasOptionalWebAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Alternativer Internetzugang"@de .
+<http://purl.org/ontology/libso#PCWorkStation> <http://www.w3.org/2000/01/rdf-schema#label> "PC-Arbeitsplatz"@de .
+<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "OrganizationalUnit"@en .
+<http://www.w3.org/2006/vcard/ns#Fax> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#TelephoneType> .
+<http://purl.org/ontology/dso#Digitization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/service#provides> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/service#providedBy> .
+<http://purl.org/goodrelations/v1#DayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#PointOfService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://purl.org/ontology/dso#loan> <http://www.w3.org/2000/01/rdf-schema#label> "Interloan"@en .
+<http://purl.org/ontology/libso#PointOfService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#LibraryTour> <http://www.w3.org/2000/01/rdf-schema#comment> "A service provided to guide the users through the library building and to show them the potential uses." .
+<http://purl.org/ontology/libso#POSUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://purl.org/ontology/libso#staffContact> <http://www.w3.org/2000/01/rdf-schema#label> "staff Contact"@en .
+<http://purl.org/ontology/libso#NationalLicence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/libso#Licence> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "This specifies the gr:DayOfWeek to which the gr:OpeningHoursSpecification is related..." .
+<http://purl.org/ontology/libso#WebBasedUsage> <http://www.w3.org/2000/01/rdf-schema#label> "Web Based Usage Service"@en .
+<http://www.w3.org/2006/vcard/ns#street-address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#staffContact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Organization> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#Location> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#PriceSpecification> .
+<http://purl.org/ontology/libso#POSDepartment> <http://www.w3.org/2000/01/rdf-schema#label> "Abteilung als Servicepunkt"@de .
+<http://www.w3.org/2006/vcard/ns#locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#FormalOrganization> .
+<http://purl.org/ontology/libso#room> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://purl.org/ontology/libso#SubService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#WebBasedUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#WebBasedInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://purl.org/ontology/libso#hasOptionalWebAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/libso#WebBased> .
+<http://purl.org/ontology/libso#Registration> <http://www.w3.org/2000/01/rdf-schema#label> "User Registration"@en .
+<http://purl.org/ontology/libso#WebBased> <http://www.w3.org/2000/01/rdf-schema#label> "Internetbasierte Dienstleistung"@de .
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/2000/01/rdf-schema#label> "formatted name"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#room> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/libso#OnlineInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Online Information"@en .
+<http://purl.org/ontology/libso#CopierOrScanner> <http://www.w3.org/2000/01/rdf-schema#comment> "A service provided to enable users making personal copies or scans of documents." .
+<http://purl.org/ontology/libso#Licence> <http://www.w3.org/2000/01/rdf-schema#label> "Licence"@en .
+<http://purl.org/ontology/dso#Presentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/dso#documentService> .
+<http://purl.org/ontology/libso#LocalUsage> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of service provided to take use of the library\u2019s media collection." .
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/libso#staffContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> .
+<http://purl.org/ontology/libso#InformationCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Informationstheke"@de .
+<http://purl.org/ontology/libso#POSBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "Geb\u00E4ude als Servicepunkt"@de .
+<http://purl.org/goodrelations/v1#opens> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> .
+<http://purl.org/ontology/service#Service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/service> .
+<http://purl.org/ontology/libso#POSUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Organizational Unit as Point Of Service"@en .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an Organization of which this Unit is a part, e.g.\n    a Department within a larger FormalOrganization. This is the inverse of\n    `org:hasUnit`."@en .
+<http://purl.org/ontology/dso#loan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dso> .
+<http://www.w3.org/2006/vcard/ns#Voice> <http://www.w3.org/2000/01/rdf-schema#label> "Voice"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the amount of money for a price per\n    unit, shipping charges, or payment charges. The currency and other relevant\n    details are attached to the respective gr:PriceSpecification etc..." .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#OpeingHoursSpecification> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://purl.org/ontology/libso#SingleUser> <http://www.w3.org/2000/01/rdf-schema#Label> "Sinlge User Version"@en .
+<http://www.w3.org/2006/vcard/ns#hasTelephone> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/vcard/ns#tel> .
+<http://purl.org/ontology/libso#PayPerUse> <http://www.w3.org/2000/01/rdf-schema#Label> "Paid Offer"@en .
+<http://purl.org/ontology/libso#LibraryTour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalInformation> .
+<http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "This is a conceptual entity that holds together all information about the opening hours on a given day (gr:DayOfWeek)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#Location> .
+<http://purl.org/ontology/libso#OnlineInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#WebBasedInformation> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a unit which is part of this Organization, e.g. a\n        Department within a larger FormalOrganization. Inverse of `org:unitOf`."@en .
+<http://purl.org/ontology/libso#hasAccessURL> <http://www.w3.org/2000/01/rdf-schema#label> "has access URL"@en .
+<http://purl.org/ontology/libso#WebBased> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LibraryService> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#label> "postal code"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#Catalogue> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue"@en .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/libso#POSBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#PointOfService> .
+<http://purl.org/ontology/libso#hasCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/dso#Presentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A service to provide space to use the media collection on site at the library, e.g. in a reading room." .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/agent> .
+<http://purl.org/ontology/libso#LibraryService> <http://www.w3.org/2000/01/rdf-schema#label> "Library Service"@en .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/ontology/libso#WebBasedInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/2006/vcard/ns#organization-name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/ontology/libso#GroupWorkSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Unit price specification"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#Location> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "has currency (1..1)"@en .
+_:fa15d721d23e144d1bbb6d19a793588c9b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/org#identifier> .
+<http://purl.org/ontology/dso#InterLoan> <http://www.w3.org/2000/01/rdf-schema#label> "Fernleihe"@de .
+<http://www.w3.org/2006/vcard/ns#hasEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/service#provides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/libso#LibraryService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#LocalInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Lokale Informationsvermittlung"@de .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/2006/vcard/ns#Fax> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/ontology/libso#Condition> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/ontology/service#ServiceLimitation> .
+<http://purl.org/ontology/dso#Presentation> <http://www.w3.org/2000/01/rdf-schema#label> "Presentation"@en .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/libso#IndividualWorkSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#WebBased> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of online service provided on the library\u2019s website." .
+<http://purl.org/ontology/service#providedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/service#Service> .
+<http://purl.org/ontology/libso#PhotoService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalWork> .
+<http://purl.org/ontology/libso#CopierOrScanner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#PhotoService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/service#Service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schema.org/Product> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#PriceSpecification> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency for all prices in the gr:PriceSpecification given using the ISO 4217 standard (3 characters)." .
+<http://purl.org/ontology/dso#Presentation> <http://www.w3.org/2000/01/rdf-schema#label> "Pr\u00E4senzansicht"@de .
+<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#LocalWork> <http://www.w3.org/2000/01/rdf-schema#label> "Local Work"@en .
+<http://www.w3.org/2006/vcard/ns#hasEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the electronic mail address for communication with the object"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#LocalInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Local Information Service"@en .
+<http://purl.org/ontology/service#providedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/libso#LibraryTour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#Local> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LibraryService> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/libso#ResearchStation> <http://www.w3.org/2000/01/rdf-schema#label> "Research Station"@en .
+<http://purl.org/ontology/libso#LocalUsage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Condition"@en .
+<http://www.w3.org/2006/vcard/ns#hasEmail> <http://www.w3.org/2000/01/rdf-schema#label> "has email"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#room> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#POSDepartment> .
+<http://purl.org/ontology/libso#LocalInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/2006/vcard/ns#street-address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/libso#Local> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of service that is offered on site at the library." .
+<http://purl.org/ontology/service#provides> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/service> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has opening hours specification (0..*)"@en .
+<http://www.w3.org/2006/vcard/ns#hasTelephone> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the telephone number for telephony communication with the object"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#hasPointOfService> <http://www.w3.org/2000/01/rdf-schema#label> "has point of service"@en .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/libso#Free> <http://www.w3.org/2000/01/rdf-schema#Label> "Free Online Access"@en .
+<http://purl.org/ontology/service#provides> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/service#Service> .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/goodrelations/v1#BusinessEntity> .
+<http://purl.org/ontology/libso#POSDepartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#label> "has site"@en .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a collection of people organized together into a\n        community or other social, commercial or political structure. The group has\n        some common purpose or reason for existence which goes beyond the set of\n        people belonging to it and can act as an Agent. Organizations are often \n        decomposable into hierarchical structures. It is recommended that SKOS lexical labels\n        should be used to label the Organization. In particular `skos:prefLabel` for\n        the primary (possibly legally recognized name), `skos:altLabel` for alternative\n        names (trading names, colloquial names) and `skos:notation` to denote a\n        code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"@en .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#IndividualWorkSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Einzelarbeitsplatz"@de .
+<http://purl.org/ontology/libso#Licence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#Condition> .
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/2000/01/rdf-schema#comment> "The formatted text corresponding to the name of the object" .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/ontology/libso#staffContact> <http://www.w3.org/2000/01/rdf-schema#label> "Kontakt zum Personal"@de .
+<http://purl.org/ontology/dso#InterLoan> <http://www.w3.org/2000/01/rdf-schema#label> "Interloan"@en .
+<http://purl.org/ontology/libso#hasPeriodTime> <http://www.w3.org/2000/01/rdf-schema#label> "zugeh\u00F6rige Frist"@de .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the electronic mail address for communication\n        with the object the vCard represents. Use the hasEmail object property."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#POSUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.w3.org/2006/vcard/ns#street-address> <http://www.w3.org/2000/01/rdf-schema#label> "street address"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "This links a gr:Offering to a gr:PriceSpecification or specifications..." .
+<http://purl.org/ontology/libso#WebBased> <http://www.w3.org/2000/01/rdf-schema#label> "Web Based Service"@en .
+<http://purl.org/ontology/libso#PhotoService> <http://www.w3.org/2000/01/rdf-schema#comment> "a service provided to generate photographs for the users." .
+<http://purl.org/ontology/libso#hasPeriodTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#hasLicence> <http://www.w3.org/2000/01/rdf-schema#label> "has Licence"@en .
+<http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://purl.org/ontology/libso#LibraryService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/service#Service> .
+<http://purl.org/ontology/libso#Registration> <http://www.w3.org/2000/01/rdf-schema#label> "Nutzeranmeldung"@de .
+<http://purl.org/ontology/libso#ResearchStation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://purl.org/ontology/libso#hasPeriodTime> <http://www.w3.org/2000/01/rdf-schema#label> "has Period Time"@en .
+<http://purl.org/ontology/libso#relatedDocument> <http://www.w3.org/2000/01/rdf-schema#label> "related Document"@en .
+<http://purl.org/ontology/libso#POSDepartment> <http://www.w3.org/2000/01/rdf-schema#label> "Department as Point Of Service"@en .
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#Local> <http://www.w3.org/2000/01/rdf-schema#label> "Local Service"@en .
+<http://purl.org/ontology/libso#Database> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#WebBasedUsage> .
+<http://purl.org/ontology/libso#hasAccessURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/libso#hasAccessURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> .
+<http://purl.org/ontology/libso#NationalLicence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#Free> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/dso#Digitization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#CopierOrScanner> .
+<http://purl.org/ontology/libso#CopierOrScanner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#hasLicence> <http://www.w3.org/2000/01/rdf-schema#label> "unter Lizenz"@de .
+<http://purl.org/ontology/libso#hasOptionalWebAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/libso#POSBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "defines a building as a physical site where a local service is available." .
+<http://purl.org/ontology/libso#GroupWorkSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Group Work Room"@en .
+<http://purl.org/ontology/libso#UserTraining> <http://www.w3.org/2000/01/rdf-schema#comment> "A service provided to train the users in research and use of the library\u2019s media collection." .
+_:fa15d721d23e144d1bbb6d19a793588c9b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.w3.org/2006/vcard/ns#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Place> .
+<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#comment> "The country name associated with the address of the object" .
+<http://purl.org/goodrelations/v1#Wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://purl.org/ontology/libso#relatedDocument> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/libso#SubService> <http://www.w3.org/2000/01/rdf-schema#label> "Dienstleistungsbestandteil"@de .
+<http://purl.org/ontology/libso#UserTraining> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalInformation> .
+<http://www.w3.org/2006/vcard/ns#locality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/goodrelations/v1#opens> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://purl.org/ontology/libso#NationalLicence> <http://www.w3.org/2000/01/rdf-schema#Label> "National Licence"@en .
+<http://purl.org/ontology/libso#POSUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#PointOfService> .
+<http://purl.org/ontology/libso#GroupWorkSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Gruppenarbeitsraum"@de .
+<http://www.w3.org/2006/vcard/ns#street-address> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/ontology/service#providedBy> <http://www.w3.org/2000/01/rdf-schema#label> "providedBy"@en .
+<http://www.w3.org/2006/vcard/ns#Fax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/vcard/ns#hasAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the components of the delivery address for the object"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2006/vcard/ns#Organization> .
+<http://purl.org/ontology/dso#loan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/dso#DocumentService> .
+<http://purl.org/goodrelations/v1#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "The day of the week, used to specify to which day the opening hours of a gr:OpeningHoursSpecification refer." .
+<http://purl.org/ontology/libso#hasOptionalWebAccess> <http://www.w3.org/2000/01/rdf-schema#label> "has optional web access"@en .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/vcard/ns#street-address> <http://www.w3.org/2000/01/rdf-schema#comment> "The street address associated with the address of the object" .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceProvider"@en .
+<http://purl.org/ontology/libso#Licence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#PCWorkStation> <http://www.w3.org/2000/01/rdf-schema#label> "PC Work Station"@en .
+<http://purl.org/ontology/libso#InformationCounter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalInformation> .
+<http://www.w3.org/2006/vcard/ns#organization-name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#POSDepartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#PointOfService> .
+<http://purl.org/ontology/libso#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the terms of use for a service." .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
+<http://purl.org/ontology/libso#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#WebBasedUsage> .
+<http://purl.org/ontology/libso#CopierBlack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/2006/vcard/ns#Voice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#TelephoneType> .
+<http://www.w3.org/2006/vcard/ns#hasEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Email> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Site> .
+<http://purl.org/ontology/libso#IndividualWorkSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalWork> .
+<http://purl.org/ontology/libso#POSBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#hasPeriodTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/libso#Condition> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en .
+<http://purl.org/ontology/libso#CopierBlack> <http://www.w3.org/2000/01/rdf-schema#label> "Schwarz-Wei\u00DF-Kopierer"@de .
+<http://purl.org/goodrelations/v1#opens> <http://www.w3.org/2000/01/rdf-schema#comment> "The opening hour of the gr:Location on the given gr:DayOf- Week..." .
+<http://purl.org/ontology/service#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/agent> .
+<http://purl.org/ontology/libso#IndividualWorkSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Individual Work Space"@en .
+<http://purl.org/goodrelations/v1#Friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2006/vcard/ns#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to indicate the resource value of an object property that requires property parameters"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/dso#Presentation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dso> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
+<http://www.w3.org/2006/vcard/ns#hasAddress> <http://www.w3.org/2000/01/rdf-schema#label> "has address"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/2000/01/rdf-schema#comment> "An object representing a single person or entity"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2002/07/owl#hasKey> _:fa15d721d23e144d1bbb6d19a793588c9b1 .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "For use in LSO: This property links a lso:Local to a gr:OpeningHoursSpecification." .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://purl.org/ontology/libso#SingleUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/libso#Licence> .
+<http://purl.org/ontology/libso#CopierOrScanner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalWork> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "For use in LSO: This property links a lso:LibraryService to a gr:PriceSpecification." .
+<http://purl.org/ontology/dso#OpenAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Open Access"@en .
+<http://purl.org/ontology/libso#Database> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/dso#loan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalUsage> .
+<http://purl.org/ontology/libso#GroupWorkSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#Registration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/libso#CopierOrScanner> <http://www.w3.org/2000/01/rdf-schema#label> "Kopierer oder Scanner"@de .
+<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the components of the delivery address for the object"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/libso#POSBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://www.w3.org/2006/vcard/ns#hasEmail> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/libso#relatedDocument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#hasPointOfService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/libso#room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://purl.org/ontology/libso#ExternalAccess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/org#hasSubOrganization> .
+<http://purl.org/ontology/dso#InterLoan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#LocalUsage> .
+<http://purl.org/ontology/libso#PhotoService> <http://www.w3.org/2000/01/rdf-schema#label> "Photo Service"@en .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/org#subOrganizationOf> .
+<http://www.w3.org/2006/vcard/ns#Voice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/goodrelations/v1#hasOpeningHoursDayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "has opening hours day of week (1..*)"@en .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1#> .
+<http://purl.org/ontology/libso#GroupWorkSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A service to provide working space for groups of users." .
+<http://purl.org/ontology/libso#SubService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/libso> .
+<http://purl.org/ontology/libso#WebBasedUsage> <http://www.w3.org/2000/01/rdf-schema#label> "Internetbasierte Bestandsbenutzung"@de .
+<http://www.w3.org/2006/vcard/ns#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+<http://purl.org/ontology/service#Service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schema.org/Service> .
+<http://purl.org/ontology/libso#LocalInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of service provided to inform the library users on site in the library." .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit price specification is a conceptual entity that \n        specifies the price asked for a given gr:Offering by the respective gr:Business\n        Entity. An offering may be linked to multiple unit price specifications that\n        specify alternative prices for non-overlapping sets of conditions (e.g. \n        quantities or sales regions) or with differing validity periods..." .
+<http://purl.org/ontology/libso#LocalUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/libso#Local> .
+<http://purl.org/ontology/libso#room> <http://www.w3.org/2000/01/rdf-schema#label> "Zimmernummer"@de .
+<http://purl.org/ontology/libso#LibraryService> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of service provided by a library or a related Institution." .
+<http://purl.org/ontology/libso> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/ontology/libso#" .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
